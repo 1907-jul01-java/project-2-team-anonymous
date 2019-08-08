@@ -4,4 +4,5 @@ import com.revature.project2.Users;
 
 public interface UsersRepository extends CrudRepository<Users, Integer> {
 
+    public Users findById(int id);
 }
