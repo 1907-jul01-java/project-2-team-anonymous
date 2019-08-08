@@ -1,4 +1,4 @@
-﻿#PROJECT 2  -eCommerce site
+##PROJECT 2  -eCommerce site
 #Group members Jackie, Ramiro, Woodney, Khang
 webApp for selling and buying products
 #TECHNOLOGIES
