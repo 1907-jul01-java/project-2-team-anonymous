@@ -1,7 +1,7 @@
-﻿#PROJECT 2  -eCommerce site
-#Group members Jackie, Ramiro, Woodney, Khang
+# PROJECT 2  -eCommerce site
+## Group members Jackie, Ramiro, Woodney, Khang
 webApp for selling and buying products
-#TECHNOLOGIES
+## TECHNOLOGIES
 -Tech Stack
 Spring Boot
 Hibernate
@@ -11,13 +11,13 @@ Maven
 API’s
  omni auth (if time allows) 
 stripe API (if time allows)
-#USERS - Requirements
+## USERS - Requirements
  be able to purchase via click and purchase 
  view/add/remove items to a shopping cart
  Users should be able to view their transaction History
 edit personal  information
 Register 
-#Admin - REQUIREMENTS
+## Admin - REQUIREMENTS
 Should be able to view all Transactions
 Be able to refund
 Be able to restock or add new items available for purchase 
