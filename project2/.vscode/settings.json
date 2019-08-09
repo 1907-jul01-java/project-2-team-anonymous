@@ -34,5 +34,6 @@
             "username": "project2db"
         }
     ],
-    "java.configuration.updateBuildConfiguration": "automatic"
+	"java.configuration.updateBuildConfiguration": "automatic",
+	"editor.insertSpaces": true
 }
