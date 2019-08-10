@@ -1,9 +1,13 @@
 package com.revature.project2.models;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -16,6 +20,11 @@ public class Users {
     private String username;
     private String firstname;
     private String password;
+    
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(unique = true)
+    private Carts cart;
+    
 	public int getId() {
 		return id;
 	}
@@ -40,12 +49,24 @@ public class Users {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public Carts getCart() {
+		return cart;
+	}
+	public void setCart(Carts cart) {
+		this.cart = cart;
+	}
 	@Override
 	public String toString() {
 		return "Users [id=" + id + ", username=" + username + ", firstname=" + firstname + ", password=" + password
-				+ "]";
+				+ ", cart=" + cart + "]";
+	}
+	public Users(String username, String firstname, String password, Carts cart) {
+		super();
+		this.username = username;
+		this.firstname = firstname;
+		this.password = password;
+		this.cart = cart;
 	}
     
-
     
 }
