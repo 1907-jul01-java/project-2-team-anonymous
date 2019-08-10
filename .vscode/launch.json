@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DemoApplication<gs-project2-data>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.revature.project2.DemoApplication",
+            "projectName": "gs-project2-data",
+            "args": ""
+        }
+    ]
+}

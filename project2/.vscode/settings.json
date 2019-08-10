@@ -1,0 +1,39 @@
+{
+    "sqltools.connections": [
+        {
+            "askForPassword": false,
+            "connectionTimeout": 30,
+            "database": "testdb",
+            "dialect": "PostgreSQL",
+            "name": "testdb",
+            "password": "password",
+            "port": 5432,
+            "server": "127.0.0.1",
+            "username": "woody"
+        },
+        {
+            "askForPassword": false,
+            "connectionTimeout": 30,
+            "database": "ecommerce",
+            "dialect": "PostgreSQL",
+            "name": "amazondb",
+            "password": "JavaLover1234",
+            "port": 5432,
+            "server": "database-ecommerce.c7taynvr4uxe.us-east-2.rds.amazonaws.com",
+            "username": "masterUname"
+        },
+        {
+            "askForPassword": false,
+            "connectionTimeout": 30,
+            "database": "project2db",
+            "dialect": "PostgreSQL",
+            "name": "project2db",
+            "password": "project2db",
+            "port": 5432,
+            "server": "192.168.99.100",
+            "username": "project2db"
+        }
+    ],
+	"java.configuration.updateBuildConfiguration": "automatic",
+	"editor.insertSpaces": true
+}
