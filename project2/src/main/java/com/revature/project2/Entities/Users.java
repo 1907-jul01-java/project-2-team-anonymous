@@ -1,18 +1,26 @@
-package com.revature.project2;
+package com.revature.project2.Entities;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
+@Table(name = "users")
 public class Users {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
+    @Column(name="first")
     private String first;
     private String last;
     private String username;
@@ -22,6 +30,11 @@ public class Users {
     private String state;
     private String zipcode;
     private int age;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "cart_id")
+    private Carts cart;
+    // @OneToMany(cascade = CascadeType.ALL)
+    // @JoinColumn(name = "transaction")
 
     public int getId() {
         return id;
@@ -101,6 +114,14 @@ public class Users {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public Carts getCart() {
+        return cart;
+    }
+
+    public void setCart(Carts cart) {
+        this.cart = cart;
     }
 
 
