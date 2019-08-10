@@ -30,7 +30,40 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "Admin logged in."
+module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark sidebarNavigation\" data-sidebarClass=\"navbar-dark bg-dark\">\r\n        <div class=\"container-fluid\">\r\n        <a class=\"navbar-brand\" href=\"#\">Anonymous</a>\r\n        <button class=\"navbar-toggler leftNavbarToggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\"\r\n            aria-controls=\"navbarsExampleDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n            <span class=\"navbar-toggler-icon\"></span>\r\n        </button>\r\n\r\n        <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\">\r\n            <ul class=\"nav navbar-nav nav-flex-icons ml-auto\">\r\n                <li class=\"nav-item\">\r\n                    <a class=\"nav-link\" [routerLink]=\"['product']\">Add Products</a>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n                    <a class=\"nav-link\" [routerLink]=\"['transaction']\">Transaction</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li class=\"nav-item\">\r\n                    <a class=\"nav-link\" [routerLink]=\"['inventory']\">Inventory</a>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n\t\t\t\t\t <a class=\"nav-link\" [routerLink]=\"['']\" >Log Out</a>\r\n                </li>\r\n\t\t\t</ul>\r\n           <!--  <form class=\"form-inline my-2 my-lg-0\">\r\n                <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" aria-label=\"Search\">\r\n                <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n            </form> -->\r\n        </div>\r\n    </div>\r\n</nav>\r\n<router-outlet></router-outlet>"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/admin/inventory/inventory.component.html":
+/*!************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/admin/inventory/inventory.component.html ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>inventory works!</p>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/admin/product/product.component.html":
+/*!********************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/admin/product/product.component.html ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n    <h2 class=\"text-center\">Add a product</h2>\n    <div class=\"row justify-content-center\">\n        <div class=\"col-12 col-md-8 col-lg-6 pb-5\">\n\n            <!--Form with header-->\n\n            <form (submit)=\"addproduct()\">\n                <div class=\"card border-primary rounded-0\">\n                    <div class=\"card-header p-0\">\n                        <div class=\"bg-info text-white text-center py-2\">\n                            <h3><i class=\"fa fa-comment text-info\"></i> add a product</h3>\n                        </div>\n                    </div>\n                    <div class=\"card-body p-3\">\n\n                        <!--Body-->\n                        <div class=\"form-group\">\n                            <div class=\"input-group mb-2\">\n                                <div class=\"input-group-prepend\">\n                                    <div class=\"input-group-text\"><i class=\"fa fa-comment text-info\"></i></div>\n                                </div>\n                                <input type=\"text\" [(ngModel)]=\"product.name\" name=\"name\" class=\"form-control\" placeholder=\"name\" required>\n                            </div>\n                        </div>\n                        <div class=\"form-group\">\n                            <div class=\"input-group mb-2\">\n                                <div class=\"input-group-prepend\">\n                                    <div class=\"input-group-text\"><i class=\"fa fa-comment text-info\"></i></div>\n                                </div>\n                                <input type=\"number\" [(ngModel)]=\"product.quantities\" name=\"quantities\" class=\"form-control\" placeholder=\"quantities\"\n                                    required>\n                            </div>\n                        </div>\n                        <div class=\"form-group\">\n                            <div class=\"input-group mb-2\">\n                                <div class=\"input-group-prepend\">\n                                    <div class=\"input-group-text\"><i class=\"fa fa-comment text-info\"></i></div>\n                                </div>\n                                <input type=\"text\" name=\"image\" class=\"fimagec ontrol\" placeholder=\"image url\" required>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <div class=\"input-group mb-2\">\n                                <div class=\"input-group-prepend\">\n                                    <div class=\"input-group-text\"><i class=\"fa fa-comment text-info\"></i></div>\n                                </div>\n                                <textarea [(ngModel)]=\"product.description\" name= \"description\"class=\"form-control\" placeholder=\"Enter Description\" required></textarea>\n                            </div>\n                        </div>\n\n                        <div class=\"text-center\">\n                            <input type=\"submit\" value=\"Submit Product\" class=\"btn btn-info btn-block rounded-0 py-2\">\n                        </div>\n                    </div>\n\n                </div>\n            </form>\n            <!--Form with header-->\n\n        </div>\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/admin/transaction/transaction.component.html":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/admin/transaction/transaction.component.html ***!
+  \****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>transaction works!</p>\n"
 
 /***/ }),
 
@@ -41,7 +74,7 @@ module.exports = "Admin logged in."
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"login-box\" >\n\t<div class=\"login-header\">Admin Login</div>\n\t<div class=\"login-body\">\n\t\t<form class=\"form-group\">\n\t\t\t<label>Username</label>\n\t\t\t<input type=\"text\" class=\"form-control\" name=\"\">\n\t\t\t<label>Password</label>\n\t\t\t<input type=\"password\" class=\"form-control\" name=\"\">\n\t\t\t<input type=\"checkbox\" value=\"checked\"><b>Remember</b>\n\t\t\t<input type=\"submit\" value=\"Login\" class=\"form-control btn btn-success \" name=\"\">\n\t\t</form>\n\t</div>\n</div>"
+module.exports = "<div class=\"login-box\" >\r\n\t<div class=\"login-header\">Admin Login</div>\r\n\t<div class=\"login-body\">\r\n\t\t<form (submit) = \"adminlogin()\" class=\"form-group\">\r\n\t\t\t<label>Username</label>\r\n\t\t\t<input type=\"text\" name=\"adminname\" [(ngModel)]= \"admin.adminname\" class=\"form-control\" >\r\n\t\t\t<label>Password</label>\r\n\t\t\t<input type=\"password\" name=\"password\" [(ngModel)]=\"admin.password\" class=\"form-control\">\r\n\t\t\t<input type=\"checkbox\" value=\"checked\"><b>Remember</b>\r\n\t\t\t<input type=\"submit\" value=\"Login\" class=\"form-control btn btn-success \">\r\n\t\t</form>\r\n\t</div>\r\n</div>"
 
 /***/ }),
 
@@ -52,7 +85,7 @@ module.exports = "<div class=\"login-box\" >\n\t<div class=\"login-header\">Admi
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<router-outlet></router-outlet>\n"
+module.exports = "<router-outlet></router-outlet>\r\n"
 
 /***/ }),
 
@@ -63,7 +96,7 @@ module.exports = "<router-outlet></router-outlet>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark sidebarNavigation\" data-sidebarClass=\"navbar-dark bg-dark\">\n        <div class=\"container-fluid\">\n        <a class=\"navbar-brand\" href=\"#\">Anonymous</a>\n        <button class=\"navbar-toggler leftNavbarToggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\"\n            aria-controls=\"navbarsExampleDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n            <span class=\"navbar-toggler-icon\"></span>\n        </button>\n\n        <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\">\n            <ul class=\"nav navbar-nav nav-flex-icons ml-auto\">\n                <li class=\"nav-item active\">\n                    <a class=\"nav-link\" href=\"#\">Home\n                        <span class=\"sr-only\">(current)</span>\n                    </a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" href=\"#\">Link</a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" href=\"#\">Disabled</a>\n                </li>\n                <li class=\"nav-item\">\n\t\t\t\t\t <a class=\"nav-link\" [routerLink]=\"['/signup']\" >My Account</a>\n                </li>\n\t\t\t</ul>\n           <!--  <form class=\"form-inline my-2 my-lg-0\">\n                <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" aria-label=\"Search\">\n                <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\n            </form> -->\n        </div>\n    </div>\n</nav>\n<router-outlet></router-outlet>"
+module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark sidebarNavigation\" data-sidebarClass=\"navbar-dark bg-dark\">\r\n        <div class=\"container-fluid\">\r\n        <a class=\"navbar-brand\" href=\"#\">Anonymous</a>\r\n        <button class=\"navbar-toggler leftNavbarToggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\"\r\n            aria-controls=\"navbarsExampleDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n            <span class=\"navbar-toggler-icon\"></span>\r\n        </button>\r\n\r\n        <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\">\r\n            <ul class=\"nav navbar-nav nav-flex-icons ml-auto\">\r\n                <li class=\"nav-item active\">\r\n                    <a class=\"nav-link\" href=\"#\">Home\r\n                        <span class=\"sr-only\">(current)</span>\r\n                    </a>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n                    <a class=\"nav-link\" href=\"#\">Link</a>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n                    <a class=\"nav-link\" href=\"#\">Disabled</a>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n\t\t\t\t\t <a class=\"nav-link\" [routerLink]=\"['/signup']\" >My Account</a>\r\n                </li>\r\n\t\t\t</ul>\r\n           <!--  <form class=\"form-inline my-2 my-lg-0\">\r\n                <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" aria-label=\"Search\">\r\n                <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n            </form> -->\r\n        </div>\r\n    </div>\r\n</nav>\r\n<router-outlet></router-outlet>"
 
 /***/ }),
 
@@ -74,7 +107,7 @@ module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark sideb
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\n    <div class=\"container\">\n        <h2 class=\"text-center\" id=\"title\">Anonymous</h2>\n\n        <hr>\n        <div class=\"row\">\n            <div class=\"col-md-5\">\n                <form (submit)=\"create()\" role=\"form\">\n                    <fieldset>\n                        <p class=\"text-uppercase pull-center\"> SIGN UP.</p>\n                        <div class=\"form-group\">\n                            <input name=\"first name\" [(ngModel)]=\"user.username\" id=\"username\"\n                                class=\"form-control input-lg\" placeholder=\"UserName\" type=\"text\">\n                        </div>\n                        <div class=\"form-group\">\n                            <input name=\"first name\" [(ngModel)]=\"user.firstname\" id=\"password\"\n                                class=\"form-control input-lg\" placeholder=\"First Name\" type=\"text\">\n                        </div>\n                        <div class=\"form-group\">\n                            <input name=\"password\" id=\"password2\" class=\"form-control input-lg\"\n                                [(ngModel)]=\"user.password\" placeholder=\"Password\" type=\"password\">\n                        </div>\n                        <div class=\"form-check\">\n                            <label class=\"form-check-label\">\n                                <input type=\"checkbox\" class=\"form-check-input\">\n                                By Clicking register you're agree to our policy & terms\n                            </label>\n                        </div>\n                        <div>\n                            <input type=\"submit\" class=\"btn btn-primary\" value=\" Register\">\n                        </div>\n                    </fieldset>\n                </form>\n            </div>\n\n            <div class=\"col-md-2\">\n                <!-------null------>\n            </div>\n\n            <div class=\"col-md-5\">\n                <form role=\"form\">\n                    <fieldset>\n                        <p class=\"text-uppercase\"> Login using your account: </p>\n\n                        <div class=\"form-group\">\n                            <input type=\"email\" name=\"username\" id=\"username\" class=\"form-control input-lg\"\n                                placeholder=\"username\">\n                        </div>\n                        <div class=\"form-group\">\n                            <input type=\"password\" name=\"password\" id=\"password\" class=\"form-control input-lg\"\n                                placeholder=\"Password\">\n                        </div>\n                        <div>\n                            <!-- <input type=\"submit\" class=\"btn btn-success\" value=\"Sign In\"> -->\n                            <a [routerLink]=\"['/user/1/shop']\" class=\"btn btn-success\">Login</a>\n                        </div>\n\n                    </fieldset>\n                </form>\n            </div>\n        </div>\n    </div>\n</div>"
+module.exports = "<div class=\"container-fluid\">\r\n    <div class=\"container\">\r\n        <h2 class=\"text-center\" id=\"title\">Anonymous</h2>\r\n\r\n        <hr>\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <form (submit)=\"create()\" role=\"form\">\r\n                    <fieldset>\r\n                        <p class=\"text-uppercase pull-center\"> SIGN UP.</p>\r\n                        <div class=\"form-group\">\r\n                            <input name=\"first name\" [(ngModel)]=\"user.username\" id=\"username\"\r\n                                class=\"form-control input-lg\" placeholder=\"UserName\" type=\"text\">\r\n                        </div>\r\n                        <div class=\"form-group\">\r\n                            <input name=\"first name\" [(ngModel)]=\"user.firstname\" id=\"password\"\r\n                                class=\"form-control input-lg\" placeholder=\"First Name\" type=\"text\">\r\n                        </div>\r\n                        <div class=\"form-group\">\r\n                            <input name=\"password\" id=\"password2\" class=\"form-control input-lg\"\r\n                                [(ngModel)]=\"user.password\" placeholder=\"Password\" type=\"password\">\r\n                        </div>\r\n                        <div class=\"form-check\">\r\n                            <label class=\"form-check-label\">\r\n                                <input type=\"checkbox\" class=\"form-check-input\">\r\n                                By Clicking register you're agree to our policy & terms\r\n                            </label>\r\n                        </div>\r\n                        <div>\r\n                            <input type=\"submit\" class=\"btn btn-primary\" value=\" Register\">\r\n                        </div>\r\n                    </fieldset>\r\n                </form>\r\n            </div>\r\n\r\n            <div class=\"col-md-2\">\r\n                <!-------null------>\r\n            </div>\r\n\r\n            <div class=\"col-md-5\">\r\n                <form (submit)=\"login()\" role=\"form\" >\r\n                    <fieldset>\r\n                        <p class=\"text-uppercase\"> Login using your account: </p>\r\n\r\n                        <div class=\"form-group\">\r\n                            <input type=\"email\" name=\"username\" [(ngModel)]=\"loginUser.username\" id=\"username\" class=\"form-control input-lg\"\r\n                                placeholder=\"username\">\r\n                        </div>\r\n                        <div class=\"form-group\">\r\n                            <input type=\"password\" name=\"password\" [(ngModel)]=\"loginUser.password\" id=\"password\" class=\"form-control input-lg\"\r\n                                placeholder=\"Password\">\r\n                        </div>\r\n                        <div>\r\n                            <!-- <input type=\"submit\" class=\"btn btn-success\" value=\"Sign In\"> -->\r\n                            <input type=\"submit\" class=\"btn btn-primary\" value=\" Login\">\r\n                        </div>\r\n\r\n                    </fieldset>\r\n                </form>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -85,7 +118,7 @@ module.exports = "<div class=\"container-fluid\">\n    <div class=\"container\">
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n\n\t<div class=\"row\">\n\t\t<div class=\"col-md-9  admin-content\" id=\"profile\">\n\t\t\t<div class=\"panel panel-info\" style=\"margin: 1em;\">\n\t\t\t\t<div class=\"panel-heading\">\n\t\t\t\t\t<h3 class=\"panel-title\">Name</h3>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"panel-body\">\n\t\t\t\t\tTest User\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"panel panel-info\" style=\"margin: 1em;\">\n\t\t\t\t<div class=\"panel-heading\">\n\t\t\t\t\t<h3 class=\"panel-title\">Email</h3>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"panel-body\">\n\t\t\t\t\ttestuser@gmail.com\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"panel panel-info\" style=\"margin: 1em;\">\n\t\t\t\t<div class=\"panel-heading\">\n\t\t\t\t\t<h3 class=\"panel-title\">Purchase History</h3>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"panel-body\">\n\t\t\t\t\tPurchase detail\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t</div>\n\n\t\t<div class=\"col-md-9  admin-content\" id=\"change-password\">\n\t\t\t<form action=\"/password\" method=\"post\">\n\n\n\t\t\t\t<div class=\"panel panel-info\" style=\"margin: 1em;\">\n\t\t\t\t\t<div class=\"panel-heading\">\n\t\t\t\t\t\t<h3 class=\"panel-title\"><label for=\"new_password\" class=\"control-label panel-title\">New\n\t\t\t\t\t\t\t\tPassword</label></h3>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"panel-body\">\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<div class=\"col-sm-10\">\n\t\t\t\t\t\t\t\t<input type=\"password\" class=\"form-control\" name=\"password\" id=\"new_password\">\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\n\t\t\t\t<div class=\"panel panel-info\" style=\"margin: 1em;\">\n\t\t\t\t\t<div class=\"panel-heading\">\n\t\t\t\t\t\t<h3 class=\"panel-title\"><label for=\"confirm_password\" class=\"control-label panel-title\">Confirm\n\t\t\t\t\t\t\t\tpassword</label></h3>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"panel-body\">\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<div class=\"col-sm-10\">\n\t\t\t\t\t\t\t\t<input type=\"password\" class=\"form-control\" name=\"password_confirmation\"\n\t\t\t\t\t\t\t\t\tid=\"confirm_password\">\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\n\t\t\t\t<div>\n\t\t\t\t\t<div class=\"panel-body\">\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<div class=\"pull-left\">\n\t\t\t\t\t\t\t\t<input type=\"submit\" class=\"btn btn-primary\" name=\"submit\" id=\"submit\">\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t</form>\n\t\t</div>\n\n\t\t<div class=\"col-md-9  admin-content\" id=\"settings\"></div>\n\t</div>\n</div>"
+module.exports = "<div class=\"container\">\r\n\r\n\t<div class=\"row\">\r\n\t\t<div class=\"col-md-9  admin-content\" id=\"profile\">\r\n\t\t\t<div class=\"panel panel-info\" style=\"margin: 1em;\">\r\n\t\t\t\t<div class=\"panel-heading\">\r\n\t\t\t\t\t<h3 class=\"panel-title\">Name</h3>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"panel-body\">\r\n\t\t\t\t\tTest User\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"panel panel-info\" style=\"margin: 1em;\">\r\n\t\t\t\t<div class=\"panel-heading\">\r\n\t\t\t\t\t<h3 class=\"panel-title\">Email</h3>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"panel-body\">\r\n\t\t\t\t\ttestuser@gmail.com\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"panel panel-info\" style=\"margin: 1em;\">\r\n\t\t\t\t<div class=\"panel-heading\">\r\n\t\t\t\t\t<h3 class=\"panel-title\">Purchase History</h3>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"panel-body\">\r\n\t\t\t\t\tPurchase detail\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t\t<div class=\"col-md-9  admin-content\" id=\"change-password\">\r\n\t\t\t<form action=\"/password\" method=\"post\">\r\n\r\n\r\n\t\t\t\t<div class=\"panel panel-info\" style=\"margin: 1em;\">\r\n\t\t\t\t\t<div class=\"panel-heading\">\r\n\t\t\t\t\t\t<h3 class=\"panel-title\"><label for=\"new_password\" class=\"control-label panel-title\">New\r\n\t\t\t\t\t\t\t\tPassword</label></h3>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"panel-body\">\r\n\t\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t\t\t<div class=\"col-sm-10\">\r\n\t\t\t\t\t\t\t\t<input type=\"password\" class=\"form-control\" name=\"password\" id=\"new_password\">\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\r\n\r\n\t\t\t\t<div class=\"panel panel-info\" style=\"margin: 1em;\">\r\n\t\t\t\t\t<div class=\"panel-heading\">\r\n\t\t\t\t\t\t<h3 class=\"panel-title\"><label for=\"confirm_password\" class=\"control-label panel-title\">Confirm\r\n\t\t\t\t\t\t\t\tpassword</label></h3>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"panel-body\">\r\n\t\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t\t\t<div class=\"col-sm-10\">\r\n\t\t\t\t\t\t\t\t<input type=\"password\" class=\"form-control\" name=\"password_confirmation\"\r\n\t\t\t\t\t\t\t\t\tid=\"confirm_password\">\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\r\n\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<div class=\"panel-body\">\r\n\t\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t\t\t<div class=\"pull-left\">\r\n\t\t\t\t\t\t\t\t<input type=\"submit\" class=\"btn btn-primary\" name=\"submit\" id=\"submit\">\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</form>\r\n\t\t</div>\r\n\r\n\t\t<div class=\"col-md-9  admin-content\" id=\"settings\"></div>\r\n\t</div>\r\n</div>"
 
 /***/ }),
 
@@ -96,7 +129,7 @@ module.exports = "<div class=\"container\">\n\n\t<div class=\"row\">\n\t\t<div c
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n\t<table id=\"cart\" class=\"table table-hover table-condensed\">\n\t\t<thead>\n\t\t\t<tr>\n\t\t\t\t<th style=\"width:50%\">Product</th>\n\t\t\t\t<th style=\"width:10%\">Price</th>\n\t\t\t\t<th style=\"width:8%\">Quantity</th>\n\t\t\t\t<th style=\"width:22%\" class=\"text-center\">Subtotal</th>\n\t\t\t\t<th style=\"width:10%\"></th>\n\t\t\t</tr>\n\t\t</thead>\n\t\t<tbody>\n\t\t\t<tr>\n\t\t\t\t<td data-th=\"Product\">\n\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t<div class=\"col-sm-2 hidden-xs\"><img src=\"http://placehold.it/100x100\" alt=\"...\"\n\t\t\t\t\t\t\t\tclass=\"img-responsive\" /></div>\n\t\t\t\t\t\t<div class=\"col-sm-10\">\n\t\t\t\t\t\t\t<h4 class=\"nomargin\">Product 1</h4>\n\t\t\t\t\t\t\t<p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n\t\t\t\t\t\t\t\tpariatur. Lorem ipsum dolor sit amet.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</td>\n\t\t\t\t<td data-th=\"Price\">$150.00</td>\n\t\t\t\t<td data-th=\"Quantity\">\n\t\t\t\t\t<input type=\"number\" class=\"form-control text-center\" value=\"1\">\n\t\t\t\t</td>\n\t\t\t\t<td data-th=\"Subtotal\" class=\"text-center\">150.00</td>\n\t\t\t\t<td class=\"actions\" data-th=\"\">\n\t\t\t\t\t<button class=\"btn btn-info btn-sm\"><i class=\"fa fa-refresh\"></i></button>\n\t\t\t\t\t<button class=\"btn btn-danger btn-sm\"><i class=\"fa fa-trash-o\"></i></button>\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t</tbody>\n\t\t<tfoot>\n\t\t\t<tr class=\"visible-xs\">\n\t\t\t\t<td class=\"text-center\"><strong>Total 1.99</strong></td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td><a href=\"#\" class=\"btn btn-warning\"><i class=\"fa fa-angle-left\"></i> Continue Shopping</a></td>\n\t\t\t\t<td colspan=\"2\" class=\"hidden-xs\"></td>\n\t\t\t\t<td class=\"hidden-xs text-center\"><strong>Total $150.00</strong></td>\n\t\t\t\t<td><a href=\"https://www.paypal.com/webapps/hermes?token=5EY097812P7754247&useraction=commit&mfid=1546377013907_cf1dec6830d7\"\n\t\t\t\t\t\tclass=\"btn btn-success btn-block\">Checkout <i class=\"fa fa-angle-right\"></i></a></td>\n\t\t\t</tr>\n\t\t</tfoot>\n\t</table>\n</div>"
+module.exports = "<div class=\"container\">\r\n\t<table id=\"cart\" class=\"table table-hover table-condensed\">\r\n\t\t<thead>\r\n\t\t\t<tr>\r\n\t\t\t\t<th style=\"width:50%\">Product</th>\r\n\t\t\t\t<th style=\"width:10%\">Price</th>\r\n\t\t\t\t<th style=\"width:8%\">Quantity</th>\r\n\t\t\t\t<th style=\"width:22%\" class=\"text-center\">Subtotal</th>\r\n\t\t\t\t<th style=\"width:10%\"></th>\r\n\t\t\t</tr>\r\n\t\t</thead>\r\n\t\t<tbody>\r\n\t\t\t<tr>\r\n\t\t\t\t<td data-th=\"Product\">\r\n\t\t\t\t\t<div class=\"row\">\r\n\t\t\t\t\t\t<div class=\"col-sm-2 hidden-xs\"><img src=\"http://placehold.it/100x100\" alt=\"...\"\r\n\t\t\t\t\t\t\t\tclass=\"img-responsive\" /></div>\r\n\t\t\t\t\t\t<div class=\"col-sm-10\">\r\n\t\t\t\t\t\t\t<h4 class=\"nomargin\">Product 1</h4>\r\n\t\t\t\t\t\t\t<p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\r\n\t\t\t\t\t\t\t\tpariatur. Lorem ipsum dolor sit amet.</p>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</td>\r\n\t\t\t\t<td data-th=\"Price\">$150.00</td>\r\n\t\t\t\t<td data-th=\"Quantity\">\r\n\t\t\t\t\t<input type=\"number\" class=\"form-control text-center\" value=\"1\">\r\n\t\t\t\t</td>\r\n\t\t\t\t<td data-th=\"Subtotal\" class=\"text-center\">150.00</td>\r\n\t\t\t\t<td class=\"actions\" data-th=\"\">\r\n\t\t\t\t\t<button class=\"btn btn-info btn-sm\"><i class=\"fa fa-refresh\"></i></button>\r\n\t\t\t\t\t<button class=\"btn btn-danger btn-sm\"><i class=\"fa fa-trash-o\"></i></button>\r\n\t\t\t\t</td>\r\n\t\t\t</tr>\r\n\t\t</tbody>\r\n\t\t<tfoot>\r\n\t\t\t<tr class=\"visible-xs\">\r\n\t\t\t\t<td class=\"text-center\"><strong>Total 1.99</strong></td>\r\n\t\t\t</tr>\r\n\t\t\t<tr>\r\n\t\t\t\t<td><a href=\"#\" class=\"btn btn-warning\"><i class=\"fa fa-angle-left\"></i> Continue Shopping</a></td>\r\n\t\t\t\t<td colspan=\"2\" class=\"hidden-xs\"></td>\r\n\t\t\t\t<td class=\"hidden-xs text-center\"><strong>Total $150.00</strong></td>\r\n\t\t\t\t<td><a href=\"https://www.paypal.com/webapps/hermes?token=5EY097812P7754247&useraction=commit&mfid=1546377013907_cf1dec6830d7\"\r\n\t\t\t\t\t\tclass=\"btn btn-success btn-block\">Checkout <i class=\"fa fa-angle-right\"></i></a></td>\r\n\t\t\t</tr>\r\n\t\t</tfoot>\r\n\t</table>\r\n</div>"
 
 /***/ }),
 
@@ -107,7 +140,7 @@ module.exports = "<div class=\"container\">\n\t<table id=\"cart\" class=\"table 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n\t<div class=\"row category-credit\" style=\"margin-top:20px\">\n\t\t<div class=\"col-lg-2 col-md-4 col-xs-6 thumb \">\n\t\t\t<div class=\"thumbnail\">\n\t\t\t\t<a class=\"\" href=\"#\">\n\t\t\t\t\t<img class=\"img-responsive\"\n\t\t\t\t\t\tsrc=\"http://www.savoyuptown.com/wp-content/uploads/be/beanie-hat-vector.jpg\" alt=\"\" width=\"100\"\n\t\t\t\t\t\theight=\"100\">\n\t\t\t\t\t<div class=\"wrapper\">\n\t\t\t\t\t\t<div class=\"caption post-content\">\n\t\t\t\t\t\t\t<h4>Item</h4>\n\t\t\t\t\t\t\t<span>Stuff</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t\t<div class=\"wrapper\">\n\t\t\t\t\t<div class=\"post-meta\">\n\t\t\t\t\t\t<small>Some Stuff</small>\n\t\t\t\t\t\t<div class=\"price\">$79-</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"col-lg-2 col-md-4 col-xs-6 thumb \">\n\t\t\t<div class=\"thumbnail\">\n\t\t\t\t<a class=\"\" href=\"#\">\n\t\t\t\t\t<img class=\"img-responsive\"\n\t\t\t\t\t\tsrc=\"http://www.savoyuptown.com/wp-content/uploads/be/beanie-hat-vector.jpg\" alt=\"\" width=\"100\"\n\t\t\t\t\t\theight=\"100\">\n\t\t\t\t\t<div class=\"wrapper\">\n\t\t\t\t\t\t<div class=\"caption post-content\">\n\t\t\t\t\t\t\t<h4>Item</h4>\n\t\t\t\t\t\t\t<span>Stuff</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t\t<div class=\"wrapper\">\n\t\t\t\t\t<div class=\"post-meta\">\n\t\t\t\t\t\t<small>Some Stuff</small>\n\t\t\t\t\t\t<div class=\"price\">$79-</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"col-lg-2 col-md-4 col-xs-6 thumb \">\n\t\t\t<div class=\"thumbnail\">\n\t\t\t\t<a class=\"\" href=\"#\">\n\t\t\t\t\t<img class=\"img-responsive\"\n\t\t\t\t\t\tsrc=\"http://www.savoyuptown.com/wp-content/uploads/be/beanie-hat-vector.jpg\" alt=\"\" width=\"100\"\n\t\t\t\t\t\theight=\"100\">\n\t\t\t\t\t<div class=\"wrapper\">\n\t\t\t\t\t\t<div class=\"caption post-content\">\n\t\t\t\t\t\t\t<h4>Item</h4>\n\t\t\t\t\t\t\t<span>Stuff</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t\t<div class=\"wrapper\">\n\t\t\t\t\t<div class=\"post-meta\">\n\t\t\t\t\t\t<small>Some Stuff</small>\n\t\t\t\t\t\t<div class=\"price\">$79-</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"col-lg-2 col-md-4 col-xs-6 thumb \">\n\t\t\t<div class=\"thumbnail\">\n\t\t\t\t<a class=\"\" href=\"#\">\n\t\t\t\t\t<img class=\"img-responsive\"\n\t\t\t\t\t\tsrc=\"http://www.savoyuptown.com/wp-content/uploads/be/beanie-hat-vector.jpg\" alt=\"\" width=\"100\"\n\t\t\t\t\t\theight=\"100\">\n\t\t\t\t\t<div class=\"wrapper\">\n\t\t\t\t\t\t<div class=\"caption post-content\">\n\t\t\t\t\t\t\t<h4>Item</h4>\n\t\t\t\t\t\t\t<span>Stuff</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t\t<div class=\"wrapper\">\n\t\t\t\t\t<div class=\"post-meta\">\n\t\t\t\t\t\t<small>Some Stuff</small>\n\t\t\t\t\t\t<div class=\"price\">$79-</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"col-lg-2 col-md-4 col-xs-6 thumb \">\n\t\t\t<div class=\"thumbnail\">\n\t\t\t\t<a class=\"\" href=\"#\">\n\t\t\t\t\t<img class=\"img-responsive\"\n\t\t\t\t\t\tsrc=\"http://www.savoyuptown.com/wp-content/uploads/be/beanie-hat-vector.jpg\" alt=\"\" width=\"100\"\n\t\t\t\t\t\theight=\"100\">\n\t\t\t\t\t<div class=\"wrapper\">\n\t\t\t\t\t\t<div class=\"caption post-content\">\n\t\t\t\t\t\t\t<h4>Item</h4>\n\t\t\t\t\t\t\t<span>Stuff</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t\t<div class=\"wrapper\">\n\t\t\t\t\t<div class=\"post-meta\">\n\t\t\t\t\t\t<small>Some Stuff</small>\n\t\t\t\t\t\t<div class=\"price\">$79-</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>"
+module.exports = "<div class=\"container\">\r\n\t<div class=\"row category-credit\" style=\"margin-top:20px\">\r\n\t\t<div class=\"col-lg-2 col-md-4 col-xs-6 thumb \">\r\n\t\t\t<div class=\"thumbnail\">\r\n\t\t\t\t<a class=\"\" href=\"#\">\r\n\t\t\t\t\t<img class=\"img-responsive\"\r\n\t\t\t\t\t\tsrc=\"http://www.savoyuptown.com/wp-content/uploads/be/beanie-hat-vector.jpg\" alt=\"\" width=\"100\"\r\n\t\t\t\t\t\theight=\"100\">\r\n\t\t\t\t\t<div class=\"wrapper\">\r\n\t\t\t\t\t\t<div class=\"caption post-content\">\r\n\t\t\t\t\t\t\t<h4>Item</h4>\r\n\t\t\t\t\t\t\t<span>Stuff</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t\t<div class=\"wrapper\">\r\n\t\t\t\t\t<div class=\"post-meta\">\r\n\t\t\t\t\t\t<small>Some Stuff</small>\r\n\t\t\t\t\t\t<div class=\"price\">$79-</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class=\"col-lg-2 col-md-4 col-xs-6 thumb \">\r\n\t\t\t<div class=\"thumbnail\">\r\n\t\t\t\t<a class=\"\" href=\"#\">\r\n\t\t\t\t\t<img class=\"img-responsive\"\r\n\t\t\t\t\t\tsrc=\"http://www.savoyuptown.com/wp-content/uploads/be/beanie-hat-vector.jpg\" alt=\"\" width=\"100\"\r\n\t\t\t\t\t\theight=\"100\">\r\n\t\t\t\t\t<div class=\"wrapper\">\r\n\t\t\t\t\t\t<div class=\"caption post-content\">\r\n\t\t\t\t\t\t\t<h4>Item</h4>\r\n\t\t\t\t\t\t\t<span>Stuff</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t\t<div class=\"wrapper\">\r\n\t\t\t\t\t<div class=\"post-meta\">\r\n\t\t\t\t\t\t<small>Some Stuff</small>\r\n\t\t\t\t\t\t<div class=\"price\">$79-</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class=\"col-lg-2 col-md-4 col-xs-6 thumb \">\r\n\t\t\t<div class=\"thumbnail\">\r\n\t\t\t\t<a class=\"\" href=\"#\">\r\n\t\t\t\t\t<img class=\"img-responsive\"\r\n\t\t\t\t\t\tsrc=\"http://www.savoyuptown.com/wp-content/uploads/be/beanie-hat-vector.jpg\" alt=\"\" width=\"100\"\r\n\t\t\t\t\t\theight=\"100\">\r\n\t\t\t\t\t<div class=\"wrapper\">\r\n\t\t\t\t\t\t<div class=\"caption post-content\">\r\n\t\t\t\t\t\t\t<h4>Item</h4>\r\n\t\t\t\t\t\t\t<span>Stuff</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t\t<div class=\"wrapper\">\r\n\t\t\t\t\t<div class=\"post-meta\">\r\n\t\t\t\t\t\t<small>Some Stuff</small>\r\n\t\t\t\t\t\t<div class=\"price\">$79-</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class=\"col-lg-2 col-md-4 col-xs-6 thumb \">\r\n\t\t\t<div class=\"thumbnail\">\r\n\t\t\t\t<a class=\"\" href=\"#\">\r\n\t\t\t\t\t<img class=\"img-responsive\"\r\n\t\t\t\t\t\tsrc=\"http://www.savoyuptown.com/wp-content/uploads/be/beanie-hat-vector.jpg\" alt=\"\" width=\"100\"\r\n\t\t\t\t\t\theight=\"100\">\r\n\t\t\t\t\t<div class=\"wrapper\">\r\n\t\t\t\t\t\t<div class=\"caption post-content\">\r\n\t\t\t\t\t\t\t<h4>Item</h4>\r\n\t\t\t\t\t\t\t<span>Stuff</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t\t<div class=\"wrapper\">\r\n\t\t\t\t\t<div class=\"post-meta\">\r\n\t\t\t\t\t\t<small>Some Stuff</small>\r\n\t\t\t\t\t\t<div class=\"price\">$79-</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class=\"col-lg-2 col-md-4 col-xs-6 thumb \">\r\n\t\t\t<div class=\"thumbnail\">\r\n\t\t\t\t<a class=\"\" href=\"#\">\r\n\t\t\t\t\t<img class=\"img-responsive\"\r\n\t\t\t\t\t\tsrc=\"http://www.savoyuptown.com/wp-content/uploads/be/beanie-hat-vector.jpg\" alt=\"\" width=\"100\"\r\n\t\t\t\t\t\theight=\"100\">\r\n\t\t\t\t\t<div class=\"wrapper\">\r\n\t\t\t\t\t\t<div class=\"caption post-content\">\r\n\t\t\t\t\t\t\t<h4>Item</h4>\r\n\t\t\t\t\t\t\t<span>Stuff</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t\t<div class=\"wrapper\">\r\n\t\t\t\t\t<div class=\"post-meta\">\r\n\t\t\t\t\t\t<small>Some Stuff</small>\r\n\t\t\t\t\t\t<div class=\"price\">$79-</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>"
 
 /***/ }),
 
@@ -118,7 +151,45 @@ module.exports = "<div class=\"container\">\n\t<div class=\"row category-credit\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark sidebarNavigation\" data-sidebarClass=\"navbar-dark bg-dark\">\n        <div class=\"container-fluid\">\n        <a class=\"navbar-brand\" href=\"#\">Anonymous</a>\n        <button class=\"navbar-toggler leftNavbarToggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\"\n            aria-controls=\"navbarsExampleDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n            <span class=\"navbar-toggler-icon\"></span>\n        </button>\n\n        <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\">\n            <ul class=\"nav navbar-nav nav-flex-icons ml-auto\">\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" [routerLink]=\"['account']\">Account </a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" [routerLink]=\"['shop']\">Shop</a>\n\t\t\t\t</li>\n\t\t\t\t<li class=\"nav-item\">\n                    <a class=\"nav-link\" [routerLink]=\"['cart']\">Cart(0)</a>\n                </li>\n                <li class=\"nav-item\">\n\t\t\t\t\t <a class=\"nav-link\" [routerLink]=\"['']\" >Log Out</a>\n                </li>\n\t\t\t</ul>\n           <!--  <form class=\"form-inline my-2 my-lg-0\">\n                <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" aria-label=\"Search\">\n                <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\n            </form> -->\n        </div>\n    </div>\n</nav>\n<router-outlet></router-outlet>"
+module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark sidebarNavigation\" data-sidebarClass=\"navbar-dark bg-dark\">\r\n        <div class=\"container-fluid\">\r\n        <a class=\"navbar-brand\" href=\"#\">Anonymous</a>\r\n        <button class=\"navbar-toggler leftNavbarToggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\"\r\n            aria-controls=\"navbarsExampleDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n            <span class=\"navbar-toggler-icon\"></span>\r\n        </button>\r\n\r\n        <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\">\r\n            <ul class=\"nav navbar-nav nav-flex-icons ml-auto\">\r\n                <li class=\"nav-item\">\r\n                    <a class=\"nav-link\" [routerLink]=\"['account']\">Account </a>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n                    <a class=\"nav-link\" [routerLink]=\"['shop']\">Shop</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li class=\"nav-item\">\r\n                    <a class=\"nav-link\" [routerLink]=\"['cart']\">Cart(0)</a>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n\t\t\t\t\t <a class=\"nav-link\" [routerLink]=\"['']\" >Log Out</a>\r\n                </li>\r\n\t\t\t</ul>\r\n           <!--  <form class=\"form-inline my-2 my-lg-0\">\r\n                <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" aria-label=\"Search\">\r\n                <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n            </form> -->\r\n        </div>\r\n    </div>\r\n</nav>\r\n<router-outlet></router-outlet>"
+
+/***/ }),
+
+/***/ "./src/app/admin.service.ts":
+/*!**********************************!*\
+  !*** ./src/app/admin.service.ts ***!
+  \**********************************/
+/*! exports provided: AdminService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminService", function() { return AdminService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
+
+
+let AdminService = class AdminService {
+    constructor(http) {
+        this.http = http;
+    }
+    adminlogin(admin = {}) {
+        console.log(admin);
+        return this.http.post('/project2/adminlogin', admin);
+    }
+};
+AdminService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+];
+AdminService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], AdminService);
+
+
 
 /***/ }),
 
@@ -164,6 +235,147 @@ AdminComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/admin/inventory/inventory.component.css":
+/*!*********************************************************!*\
+  !*** ./src/app/admin/inventory/inventory.component.css ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2ludmVudG9yeS9pbnZlbnRvcnkuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/admin/inventory/inventory.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/admin/inventory/inventory.component.ts ***!
+  \********************************************************/
+/*! exports provided: InventoryComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InventoryComponent", function() { return InventoryComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let InventoryComponent = class InventoryComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+InventoryComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-inventory',
+        template: __webpack_require__(/*! raw-loader!./inventory.component.html */ "./node_modules/raw-loader/index.js!./src/app/admin/inventory/inventory.component.html"),
+        styles: [__webpack_require__(/*! ./inventory.component.css */ "./src/app/admin/inventory/inventory.component.css")]
+    })
+], InventoryComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/product/product.component.css":
+/*!*****************************************************!*\
+  !*** ./src/app/admin/product/product.component.css ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3Byb2R1Y3QvcHJvZHVjdC5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/admin/product/product.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/admin/product/product.component.ts ***!
+  \****************************************************/
+/*! exports provided: ProductComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductComponent", function() { return ProductComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _product_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../product.service */ "./src/app/product.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
+
+
+let ProductComponent = class ProductComponent {
+    constructor(productservice, router) {
+        this.productservice = productservice;
+        this.router = router;
+        this.product = {};
+    }
+    ngOnInit() {
+    }
+    addproduct() {
+        this.productservice(this.product).subscribe();
+    }
+};
+ProductComponent.ctorParameters = () => [
+    { type: _product_service__WEBPACK_IMPORTED_MODULE_2__["ProductService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+];
+ProductComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-product',
+        template: __webpack_require__(/*! raw-loader!./product.component.html */ "./node_modules/raw-loader/index.js!./src/app/admin/product/product.component.html"),
+        styles: [__webpack_require__(/*! ./product.component.css */ "./src/app/admin/product/product.component.css")]
+    })
+], ProductComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/transaction/transaction.component.css":
+/*!*************************************************************!*\
+  !*** ./src/app/admin/transaction/transaction.component.css ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3RyYW5zYWN0aW9uL3RyYW5zYWN0aW9uLmNvbXBvbmVudC5jc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/admin/transaction/transaction.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/admin/transaction/transaction.component.ts ***!
+  \************************************************************/
+/*! exports provided: TransactionComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TransactionComponent", function() { return TransactionComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let TransactionComponent = class TransactionComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+TransactionComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-transaction',
+        template: __webpack_require__(/*! raw-loader!./transaction.component.html */ "./node_modules/raw-loader/index.js!./src/app/admin/transaction/transaction.component.html"),
+        styles: [__webpack_require__(/*! ./transaction.component.css */ "./src/app/admin/transaction/transaction.component.css")]
+    })
+], TransactionComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/adminlogin/adminlogin.component.css":
 /*!*****************************************************!*\
   !*** ./src/app/adminlogin/adminlogin.component.css ***!
@@ -187,13 +399,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminloginComponent", function() { return AdminloginComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _admin_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../admin.service */ "./src/app/admin.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
 
 
 let AdminloginComponent = class AdminloginComponent {
-    constructor() { }
+    constructor(adminservice, router) {
+        this.adminservice = adminservice;
+        this.router = router;
+        this.admin = {};
+    }
     ngOnInit() {
     }
+    adminlogin() {
+        this.adminservice.adminlogin(this.admin).subscribe((result) => this.router.navigate(['/admin', result['id']]));
+    }
 };
+AdminloginComponent.ctorParameters = () => [
+    { type: _admin_service__WEBPACK_IMPORTED_MODULE_2__["AdminService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+];
 AdminloginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-adminlogin',
@@ -227,6 +454,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _user_shop_shop_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./user/shop/shop.component */ "./src/app/user/shop/shop.component.ts");
 /* harmony import */ var _admin_admin_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./admin/admin.component */ "./src/app/admin/admin.component.ts");
 /* harmony import */ var _adminlogin_adminlogin_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./adminlogin/adminlogin.component */ "./src/app/adminlogin/adminlogin.component.ts");
+/* harmony import */ var _admin_product_product_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./admin/product/product.component */ "./src/app/admin/product/product.component.ts");
+/* harmony import */ var _admin_transaction_transaction_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./admin/transaction/transaction.component */ "./src/app/admin/transaction/transaction.component.ts");
+/* harmony import */ var _admin_inventory_inventory_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./admin/inventory/inventory.component */ "./src/app/admin/inventory/inventory.component.ts");
+
+
+
 
 
 
@@ -242,13 +475,13 @@ const routes = [
     { path: "", component: _home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"], children: [{ path: "signup", component: _home_signup_signup_component__WEBPACK_IMPORTED_MODULE_4__["SignupComponent"] }] },
     { path: "user/:id", component: _user_user_component__WEBPACK_IMPORTED_MODULE_5__["UserComponent"], children: [{ path: "account", component: _user_account_account_component__WEBPACK_IMPORTED_MODULE_6__["AccountComponent"] }, { path: "cart", component: _user_cart_cart_component__WEBPACK_IMPORTED_MODULE_7__["CartComponent"] }, { path: "shop", component: _user_shop_shop_component__WEBPACK_IMPORTED_MODULE_8__["ShopComponent"] }] },
     { path: "admin", component: _adminlogin_adminlogin_component__WEBPACK_IMPORTED_MODULE_10__["AdminloginComponent"] },
-    { path: "admin/:id", component: _admin_admin_component__WEBPACK_IMPORTED_MODULE_9__["AdminComponent"] }
+    { path: "admin/:id", component: _admin_admin_component__WEBPACK_IMPORTED_MODULE_9__["AdminComponent"], children: [{ path: "product", component: _admin_product_product_component__WEBPACK_IMPORTED_MODULE_11__["ProductComponent"] }, { path: "transaction", component: _admin_transaction_transaction_component__WEBPACK_IMPORTED_MODULE_12__["TransactionComponent"] }, { path: "inventory", component: _admin_inventory_inventory_component__WEBPACK_IMPORTED_MODULE_13__["InventoryComponent"] }] }
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
 AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes)],
+        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes, { useHash: true })],
         exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
     })
 ], AppRoutingModule);
@@ -324,6 +557,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _user_shop_shop_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./user/shop/shop.component */ "./src/app/user/shop/shop.component.ts");
 /* harmony import */ var _admin_admin_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./admin/admin.component */ "./src/app/admin/admin.component.ts");
 /* harmony import */ var _adminlogin_adminlogin_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./adminlogin/adminlogin.component */ "./src/app/adminlogin/adminlogin.component.ts");
+/* harmony import */ var _admin_product_product_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./admin/product/product.component */ "./src/app/admin/product/product.component.ts");
+/* harmony import */ var _admin_transaction_transaction_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./admin/transaction/transaction.component */ "./src/app/admin/transaction/transaction.component.ts");
+/* harmony import */ var _admin_inventory_inventory_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./admin/inventory/inventory.component */ "./src/app/admin/inventory/inventory.component.ts");
+
+
+
 
 
 
@@ -352,7 +591,10 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _user_cart_cart_component__WEBPACK_IMPORTED_MODULE_11__["CartComponent"],
             _user_shop_shop_component__WEBPACK_IMPORTED_MODULE_12__["ShopComponent"],
             _admin_admin_component__WEBPACK_IMPORTED_MODULE_13__["AdminComponent"],
-            _adminlogin_adminlogin_component__WEBPACK_IMPORTED_MODULE_14__["AdminloginComponent"]
+            _adminlogin_adminlogin_component__WEBPACK_IMPORTED_MODULE_14__["AdminloginComponent"],
+            _admin_product_product_component__WEBPACK_IMPORTED_MODULE_15__["ProductComponent"],
+            _admin_transaction_transaction_component__WEBPACK_IMPORTED_MODULE_16__["TransactionComponent"],
+            _admin_inventory_inventory_component__WEBPACK_IMPORTED_MODULE_17__["InventoryComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -445,11 +687,16 @@ let SignupComponent = class SignupComponent {
         this.userservice = userservice;
         this.router = router;
         this.user = {};
+        this.loginUser = {};
     }
     ngOnInit() {
     }
     create() {
+        console.log(this.user);
         this.userservice.create(this.user).subscribe(() => this.router.navigate(['/']));
+    }
+    login() {
+        this.userservice.login(this.loginUser).subscribe((result) => this.router.navigate(['/user', result['id'], 'shop']));
     }
 };
 SignupComponent.ctorParameters = () => [
@@ -463,6 +710,43 @@ SignupComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [__webpack_require__(/*! ./signup.component.css */ "./src/app/home/signup/signup.component.css")]
     })
 ], SignupComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/product.service.ts":
+/*!************************************!*\
+  !*** ./src/app/product.service.ts ***!
+  \************************************/
+/*! exports provided: ProductService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductService", function() { return ProductService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
+
+
+let ProductService = class ProductService {
+    constructor(http) {
+        this.http = http;
+    }
+    addproduct(product = {}) {
+        return this.http.post('/project2/addproduct', product);
+    }
+};
+ProductService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+];
+ProductService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], ProductService);
 
 
 
@@ -490,6 +774,9 @@ let UserService = class UserService {
     }
     create(user) {
         return this.http.post('/project2/create', user);
+    }
+    login(user) {
+        return this.http.post('/project2/login', user);
     }
 };
 UserService.ctorParameters = () => [

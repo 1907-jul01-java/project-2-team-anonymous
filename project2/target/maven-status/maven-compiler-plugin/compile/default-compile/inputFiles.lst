@@ -1,4 +1,7 @@
+C:\Users\jjgua\eclipse-workspace\project-2-team-anonymous\project2\src\main\java\com\revature\project2\models\Users.java
 C:\Users\jjgua\eclipse-workspace\project-2-team-anonymous\project2\src\main\java\com\revature\project2\DemoApplication.java
-C:\Users\jjgua\eclipse-workspace\project-2-team-anonymous\project2\src\main\java\com\revature\project2\Users.java
-C:\Users\jjgua\eclipse-workspace\project-2-team-anonymous\project2\src\main\java\com\revature\project2\UsersRepository.java
-C:\Users\jjgua\eclipse-workspace\project-2-team-anonymous\project2\src\main\java\com\revature\project2\MainController.java
+C:\Users\jjgua\eclipse-workspace\project-2-team-anonymous\project2\src\main\java\com\revature\project2\models\Admins.java
+C:\Users\jjgua\eclipse-workspace\project-2-team-anonymous\project2\src\main\java\com\revature\project2\controllers\UserController.java
+C:\Users\jjgua\eclipse-workspace\project-2-team-anonymous\project2\src\main\java\com\revature\project2\repos\AdminsRepository.java
+C:\Users\jjgua\eclipse-workspace\project-2-team-anonymous\project2\src\main\java\com\revature\project2\controllers\AdminController.java
+C:\Users\jjgua\eclipse-workspace\project-2-team-anonymous\project2\src\main\java\com\revature\project2\repos\UsersRepository.java

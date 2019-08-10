@@ -12,6 +12,9 @@ import { CartComponent } from './user/cart/cart.component';
 import { ShopComponent } from './user/shop/shop.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { ProductComponent } from './admin/product/product.component';
+import { TransactionComponent } from './admin/transaction/transaction.component';
+import { InventoryComponent } from './admin/inventory/inventory.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
     CartComponent,
     ShopComponent,
     AdminComponent,
-    AdminloginComponent
+    AdminloginComponent,
+    ProductComponent,
+    TransactionComponent,
+    InventoryComponent
   ],
   imports: [
     BrowserModule,

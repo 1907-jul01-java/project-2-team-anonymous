@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminService } from './../admin.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-adminlogin',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./adminlogin.component.css']
 })
 export class AdminloginComponent implements OnInit {
-
-  constructor() { }
+    admin: any = {};
+  constructor(private adminservice: AdminService, private router:Router) { }
 
   ngOnInit() {
   }
 
+  adminlogin(){
+    this.adminservice.adminlogin(this.admin).subscribe( (result) => this.router.navigate(['/admin', result['id']]));
+  }
 }

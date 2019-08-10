@@ -3,14 +3,18 @@ import { HttpClient } from '@angular/common/http';
 
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class UserService {
 
-  constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient) { }
 
-  	create(user: {}) {
-		return this.http.post('/project2/create', user);
-	}
+    create(user: {}) {
+        return this.http.post('/project2/create', user);
+    }
+
+    login(user: {}) {
+        return this.http.post('/project2/login', user);
+    }
 
 }
