@@ -9,7 +9,7 @@
                 <div class="card border-primary rounded-0">
                     <div class="card-header p-0">
                         <div class="bg-info text-white text-center py-2">
-                            <h3><i class="fa fa-comment text-info"></i> add a product</h3>
+                            <h3><i class="fa fa-comment text-info"></i>product</h3>
                         </div>
                     </div>
                     <div class="card-body p-3">
@@ -20,7 +20,8 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
                                 </div>
-                                <input type="text" [(ngModel)]="product.name" name="name" class="form-control" placeholder="name" required>
+                                <input type="text" [(ngModel)]="product.name" name="name" class="form-control"
+                                    placeholder="name" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -28,8 +29,8 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
                                 </div>
-                                <input type="number" [(ngModel)]="product.quantities" name="quantities" class="form-control" placeholder="quantities"
-                                    required>
+                                <input type="number" [(ngModel)]="product.quantity" name="quantity" class="form-control"
+                                    placeholder="quantities" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -37,16 +38,26 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
                                 </div>
-                                <input type="text" name="image" class="fimagec ontrol" placeholder="image url" required>
+                                <input type="text" [(ngModel)]="product.image" name="image" class="form-control"
+                                    placeholder="image url" required>
                             </div>
                         </div>
-
                         <div class="form-group">
                             <div class="input-group mb-2">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
                                 </div>
-                                <textarea [(ngModel)]="product.description" name= "description"class="form-control" placeholder="Enter Description" required></textarea>
+                                <input type="number" [(ngModel)]="product.price" name="price" class="form-control"
+                                    placeholder="qriceuantities" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
+                                </div>
+                                <textarea [(ngModel)]="product.description" name="description" class="form-control"
+                                    placeholder="Enter Description" required></textarea>
                             </div>
                         </div>
 

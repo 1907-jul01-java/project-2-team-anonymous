@@ -1,7 +1,10 @@
-com\revature\project2\controllers\UserController.class
 com\revature\project2\repos\AdminsRepository.class
+com\revature\project2\controllers\ProductController.class
+com\revature\project2\models\Products.class
 com\revature\project2\models\Admins.class
+com\revature\project2\models\Users.class
+com\revature\project2\controllers\UserController.class
+com\revature\project2\repos\ProductsRepository.class
 com\revature\project2\repos\UsersRepository.class
 com\revature\project2\DemoApplication.class
-com\revature\project2\models\Users.class
 com\revature\project2\controllers\AdminController.class

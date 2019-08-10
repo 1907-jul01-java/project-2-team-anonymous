@@ -11,10 +11,11 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { ProductComponent } from './admin/product/product.component';
 import { TransactionComponent } from './admin/transaction/transaction.component';
 import { InventoryComponent } from './admin/inventory/inventory.component';
+import { CheckproductComponent } from './user/checkproduct/checkproduct.component';
 
 const routes: Routes = [
     { path: "", component: HomeComponent, children: [{ path: "signup", component: SignupComponent }] },
-    { path: "user/:id", component: UserComponent, children: [{ path: "account", component: AccountComponent }, { path: "cart", component: CartComponent }, { path: "shop", component: ShopComponent }] },
+    { path: "user/:id", component: UserComponent, children: [{ path: "account", component: AccountComponent }, { path: "cart", component: CartComponent }, { path: "shop", component: ShopComponent }, {path:"shop/:id", component: CheckproductComponent}] },
     { path: "admin", component: AdminloginComponent },
     { path: "admin/:id", component: AdminComponent, children: [{ path: "product", component: ProductComponent }, { path: "transaction", component: TransactionComponent }, { path: "inventory", component: InventoryComponent }] }
 ];

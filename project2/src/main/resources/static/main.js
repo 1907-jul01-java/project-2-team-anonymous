@@ -41,7 +41,7 @@ module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark sideb
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>inventory works!</p>\n"
+module.exports = "<div class=\"container\">\n    <div class=\"row\">\n        <div class=\"well\">\n            <h1 class=\"text-center\">Products</h1>\n            <ul *ngFor=\"let product of products\" class=\"list-group\" style=\"list-style: none;\">\n                <li>\n                    <a href=\"#\" class=\"list-group-item\">\n                        <div class=\"media col-md-3\">\n                            <figure class=\"pull-left\">\n                                <img class=\"media-object img-rounded img-responsive\" src=\"http://placehold.it/350x250\"\n                                    alt=\"placehold.it/350x250\">\n                            </figure>\n                        </div>\n                        <div class=\"col-md-6\">\n                            <h4 class=\"list-group-item-heading\"> {{product.name}} </h4>\n                            <p class=\"list-group-item-text\"> {{product.description}}}</p>\n                            <p class=\"list-group-item-text\"> {{product.price}}}\n                            </p>\n                        </div>\n                    </a>\n                    <hr>\n                </li>\n            </ul>\n        </div>\n    </div>"
 
 /***/ }),
 
@@ -52,7 +52,7 @@ module.exports = "<p>inventory works!</p>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n    <h2 class=\"text-center\">Add a product</h2>\n    <div class=\"row justify-content-center\">\n        <div class=\"col-12 col-md-8 col-lg-6 pb-5\">\n\n            <!--Form with header-->\n\n            <form (submit)=\"addproduct()\">\n                <div class=\"card border-primary rounded-0\">\n                    <div class=\"card-header p-0\">\n                        <div class=\"bg-info text-white text-center py-2\">\n                            <h3><i class=\"fa fa-comment text-info\"></i> add a product</h3>\n                        </div>\n                    </div>\n                    <div class=\"card-body p-3\">\n\n                        <!--Body-->\n                        <div class=\"form-group\">\n                            <div class=\"input-group mb-2\">\n                                <div class=\"input-group-prepend\">\n                                    <div class=\"input-group-text\"><i class=\"fa fa-comment text-info\"></i></div>\n                                </div>\n                                <input type=\"text\" [(ngModel)]=\"product.name\" name=\"name\" class=\"form-control\" placeholder=\"name\" required>\n                            </div>\n                        </div>\n                        <div class=\"form-group\">\n                            <div class=\"input-group mb-2\">\n                                <div class=\"input-group-prepend\">\n                                    <div class=\"input-group-text\"><i class=\"fa fa-comment text-info\"></i></div>\n                                </div>\n                                <input type=\"number\" [(ngModel)]=\"product.quantities\" name=\"quantities\" class=\"form-control\" placeholder=\"quantities\"\n                                    required>\n                            </div>\n                        </div>\n                        <div class=\"form-group\">\n                            <div class=\"input-group mb-2\">\n                                <div class=\"input-group-prepend\">\n                                    <div class=\"input-group-text\"><i class=\"fa fa-comment text-info\"></i></div>\n                                </div>\n                                <input type=\"text\" name=\"image\" class=\"fimagec ontrol\" placeholder=\"image url\" required>\n                            </div>\n                        </div>\n\n                        <div class=\"form-group\">\n                            <div class=\"input-group mb-2\">\n                                <div class=\"input-group-prepend\">\n                                    <div class=\"input-group-text\"><i class=\"fa fa-comment text-info\"></i></div>\n                                </div>\n                                <textarea [(ngModel)]=\"product.description\" name= \"description\"class=\"form-control\" placeholder=\"Enter Description\" required></textarea>\n                            </div>\n                        </div>\n\n                        <div class=\"text-center\">\n                            <input type=\"submit\" value=\"Submit Product\" class=\"btn btn-info btn-block rounded-0 py-2\">\n                        </div>\n                    </div>\n\n                </div>\n            </form>\n            <!--Form with header-->\n\n        </div>\n    </div>\n</div>"
+module.exports = "<div class=\"container\">\n    <h2 class=\"text-center\">Add a product</h2>\n    <div class=\"row justify-content-center\">\n        <div class=\"col-12 col-md-8 col-lg-6 pb-5\">\n\n            <!--Form with header-->\n\n            <form (submit)=\"addproduct()\">\n                <div class=\"card border-primary rounded-0\">\n                    <div class=\"card-header p-0\">\n                        <div class=\"bg-info text-white text-center py-2\">\n                            <h3><i class=\"fa fa-comment text-info\"></i>product</h3>\n                        </div>\n                    </div>\n                    <div class=\"card-body p-3\">\n\n                        <!--Body-->\n                        <div class=\"form-group\">\n                            <div class=\"input-group mb-2\">\n                                <div class=\"input-group-prepend\">\n                                    <div class=\"input-group-text\"><i class=\"fa fa-comment text-info\"></i></div>\n                                </div>\n                                <input type=\"text\" [(ngModel)]=\"product.name\" name=\"name\" class=\"form-control\"\n                                    placeholder=\"name\" required>\n                            </div>\n                        </div>\n                        <div class=\"form-group\">\n                            <div class=\"input-group mb-2\">\n                                <div class=\"input-group-prepend\">\n                                    <div class=\"input-group-text\"><i class=\"fa fa-comment text-info\"></i></div>\n                                </div>\n                                <input type=\"number\" [(ngModel)]=\"product.quantity\" name=\"quantity\" class=\"form-control\"\n                                    placeholder=\"quantities\" required>\n                            </div>\n                        </div>\n                        <div class=\"form-group\">\n                            <div class=\"input-group mb-2\">\n                                <div class=\"input-group-prepend\">\n                                    <div class=\"input-group-text\"><i class=\"fa fa-comment text-info\"></i></div>\n                                </div>\n                                <input type=\"text\" [(ngModel)]=\"product.image\" name=\"image\" class=\"form-control\"\n                                    placeholder=\"image url\" required>\n                            </div>\n                        </div>\n                        <div class=\"form-group\">\n                            <div class=\"input-group mb-2\">\n                                <div class=\"input-group-prepend\">\n                                    <div class=\"input-group-text\"><i class=\"fa fa-comment text-info\"></i></div>\n                                </div>\n                                <input type=\"number\" [(ngModel)]=\"product.price\" name=\"price\" class=\"form-control\"\n                                    placeholder=\"qriceuantities\" required>\n                            </div>\n                        </div>\n                        <div class=\"form-group\">\n                            <div class=\"input-group mb-2\">\n                                <div class=\"input-group-prepend\">\n                                    <div class=\"input-group-text\"><i class=\"fa fa-comment text-info\"></i></div>\n                                </div>\n                                <textarea [(ngModel)]=\"product.description\" name=\"description\" class=\"form-control\"\n                                    placeholder=\"Enter Description\" required></textarea>\n                            </div>\n                        </div>\n\n                        <div class=\"text-center\">\n                            <input type=\"submit\" value=\"Submit Product\" class=\"btn btn-info btn-block rounded-0 py-2\">\n                        </div>\n                    </div>\n\n                </div>\n            </form>\n            <!--Form with header-->\n\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -133,6 +133,17 @@ module.exports = "<div class=\"container\">\r\n\t<table id=\"cart\" class=\"tabl
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/user/checkproduct/checkproduct.component.html":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/user/checkproduct/checkproduct.component.html ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"span2\">\n      <img src=\"http://placehold.it/350x250\"  alt=\"\" class=\"img-rounded\">\n    </div>\n    <div class=\"span4\">\n      <blockquote>\n        <p>{{product.name}}</p>\n      </blockquote>\n      <p>\n        {{product.description}}<br>\n        <a [routerLink]=\"['/routePath']\" routerLinkActive=\"router-link-active\" >Add to cart</a><br>\n      </p>\n    </div>\n "
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/user/shop/shop.component.html":
 /*!*************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/user/shop/shop.component.html ***!
@@ -140,7 +151,7 @@ module.exports = "<div class=\"container\">\r\n\t<table id=\"cart\" class=\"tabl
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n\t<div class=\"row category-credit\" style=\"margin-top:20px\">\r\n\t\t<div class=\"col-lg-2 col-md-4 col-xs-6 thumb \">\r\n\t\t\t<div class=\"thumbnail\">\r\n\t\t\t\t<a class=\"\" href=\"#\">\r\n\t\t\t\t\t<img class=\"img-responsive\"\r\n\t\t\t\t\t\tsrc=\"http://www.savoyuptown.com/wp-content/uploads/be/beanie-hat-vector.jpg\" alt=\"\" width=\"100\"\r\n\t\t\t\t\t\theight=\"100\">\r\n\t\t\t\t\t<div class=\"wrapper\">\r\n\t\t\t\t\t\t<div class=\"caption post-content\">\r\n\t\t\t\t\t\t\t<h4>Item</h4>\r\n\t\t\t\t\t\t\t<span>Stuff</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t\t<div class=\"wrapper\">\r\n\t\t\t\t\t<div class=\"post-meta\">\r\n\t\t\t\t\t\t<small>Some Stuff</small>\r\n\t\t\t\t\t\t<div class=\"price\">$79-</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class=\"col-lg-2 col-md-4 col-xs-6 thumb \">\r\n\t\t\t<div class=\"thumbnail\">\r\n\t\t\t\t<a class=\"\" href=\"#\">\r\n\t\t\t\t\t<img class=\"img-responsive\"\r\n\t\t\t\t\t\tsrc=\"http://www.savoyuptown.com/wp-content/uploads/be/beanie-hat-vector.jpg\" alt=\"\" width=\"100\"\r\n\t\t\t\t\t\theight=\"100\">\r\n\t\t\t\t\t<div class=\"wrapper\">\r\n\t\t\t\t\t\t<div class=\"caption post-content\">\r\n\t\t\t\t\t\t\t<h4>Item</h4>\r\n\t\t\t\t\t\t\t<span>Stuff</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t\t<div class=\"wrapper\">\r\n\t\t\t\t\t<div class=\"post-meta\">\r\n\t\t\t\t\t\t<small>Some Stuff</small>\r\n\t\t\t\t\t\t<div class=\"price\">$79-</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class=\"col-lg-2 col-md-4 col-xs-6 thumb \">\r\n\t\t\t<div class=\"thumbnail\">\r\n\t\t\t\t<a class=\"\" href=\"#\">\r\n\t\t\t\t\t<img class=\"img-responsive\"\r\n\t\t\t\t\t\tsrc=\"http://www.savoyuptown.com/wp-content/uploads/be/beanie-hat-vector.jpg\" alt=\"\" width=\"100\"\r\n\t\t\t\t\t\theight=\"100\">\r\n\t\t\t\t\t<div class=\"wrapper\">\r\n\t\t\t\t\t\t<div class=\"caption post-content\">\r\n\t\t\t\t\t\t\t<h4>Item</h4>\r\n\t\t\t\t\t\t\t<span>Stuff</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t\t<div class=\"wrapper\">\r\n\t\t\t\t\t<div class=\"post-meta\">\r\n\t\t\t\t\t\t<small>Some Stuff</small>\r\n\t\t\t\t\t\t<div class=\"price\">$79-</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class=\"col-lg-2 col-md-4 col-xs-6 thumb \">\r\n\t\t\t<div class=\"thumbnail\">\r\n\t\t\t\t<a class=\"\" href=\"#\">\r\n\t\t\t\t\t<img class=\"img-responsive\"\r\n\t\t\t\t\t\tsrc=\"http://www.savoyuptown.com/wp-content/uploads/be/beanie-hat-vector.jpg\" alt=\"\" width=\"100\"\r\n\t\t\t\t\t\theight=\"100\">\r\n\t\t\t\t\t<div class=\"wrapper\">\r\n\t\t\t\t\t\t<div class=\"caption post-content\">\r\n\t\t\t\t\t\t\t<h4>Item</h4>\r\n\t\t\t\t\t\t\t<span>Stuff</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t\t<div class=\"wrapper\">\r\n\t\t\t\t\t<div class=\"post-meta\">\r\n\t\t\t\t\t\t<small>Some Stuff</small>\r\n\t\t\t\t\t\t<div class=\"price\">$79-</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class=\"col-lg-2 col-md-4 col-xs-6 thumb \">\r\n\t\t\t<div class=\"thumbnail\">\r\n\t\t\t\t<a class=\"\" href=\"#\">\r\n\t\t\t\t\t<img class=\"img-responsive\"\r\n\t\t\t\t\t\tsrc=\"http://www.savoyuptown.com/wp-content/uploads/be/beanie-hat-vector.jpg\" alt=\"\" width=\"100\"\r\n\t\t\t\t\t\theight=\"100\">\r\n\t\t\t\t\t<div class=\"wrapper\">\r\n\t\t\t\t\t\t<div class=\"caption post-content\">\r\n\t\t\t\t\t\t\t<h4>Item</h4>\r\n\t\t\t\t\t\t\t<span>Stuff</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>\r\n\t\t\t\t<div class=\"wrapper\">\r\n\t\t\t\t\t<div class=\"post-meta\">\r\n\t\t\t\t\t\t<small>Some Stuff</small>\r\n\t\t\t\t\t\t<div class=\"price\">$79-</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>"
+module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"well\">\r\n            <h1 class=\"text-center\">Products</h1>\r\n            <ul *ngFor=\"let product of products\" class=\"list-group\" style=\"list-style: none;\">\r\n                <li>\r\n                    <a href=\"#\" class=\"list-group-item\">\r\n                        < <div class=\"media col-md-3\">\r\n                            <figure class=\"pull-left\">\r\n                                <a [routerLink]=\"[product.id]\">\r\n                                    <img class=\"media-object img-rounded img-responsive\" src=\"http://placehold.it/350x250\"\r\n                                        alt=\"placehold.it/350x250\">\r\n                                </a>\r\n                            </figure>\r\n                        </div>\r\n                        <div class=\"col-md-6\">\r\n                            <h4 class=\"list-group-item-heading\"> {{product.name}} </h4>\r\n                            <p class=\"list-group-item-text\"> {{product.description}}}</p><br>\r\n                            <p class=\"list-group-item-text\"> {{product.price}}}</p>\r\n                        </div>\r\n                    </a>\r\n                    <hr>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>"
 
 /***/ }),
 
@@ -242,7 +253,7 @@ AdminComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2ludmVudG9yeS9pbnZlbnRvcnkuY29tcG9uZW50LmNzcyJ9 */"
+module.exports = "a.list-group-item {\r\n    height:auto;\r\n    min-height:220px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWRtaW4vaW52ZW50b3J5L2ludmVudG9yeS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksV0FBVztJQUNYLGdCQUFnQjtBQUNwQiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2ludmVudG9yeS9pbnZlbnRvcnkuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImEubGlzdC1ncm91cC1pdGVtIHtcclxuICAgIGhlaWdodDphdXRvO1xyXG4gICAgbWluLWhlaWdodDoyMjBweDtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -258,13 +269,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InventoryComponent", function() { return InventoryComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _product_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../product.service */ "./src/app/product.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
 
 
 let InventoryComponent = class InventoryComponent {
-    constructor() { }
+    constructor(productservice, router) {
+        this.productservice = productservice;
+        this.router = router;
+        this.products = {};
+    }
     ngOnInit() {
+        this.getall();
+    }
+    getall() {
+        this.productservice.getall().subscribe(result => {
+            console.log(result);
+            this.products = result;
+        });
     }
 };
+InventoryComponent.ctorParameters = () => [
+    { type: _product_service__WEBPACK_IMPORTED_MODULE_2__["ProductService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+];
 InventoryComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-inventory',
@@ -315,7 +345,7 @@ let ProductComponent = class ProductComponent {
     ngOnInit() {
     }
     addproduct() {
-        this.productservice(this.product).subscribe();
+        this.productservice.addproduct(this.product).subscribe();
     }
 };
 ProductComponent.ctorParameters = () => [
@@ -457,6 +487,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _admin_product_product_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./admin/product/product.component */ "./src/app/admin/product/product.component.ts");
 /* harmony import */ var _admin_transaction_transaction_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./admin/transaction/transaction.component */ "./src/app/admin/transaction/transaction.component.ts");
 /* harmony import */ var _admin_inventory_inventory_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./admin/inventory/inventory.component */ "./src/app/admin/inventory/inventory.component.ts");
+/* harmony import */ var _user_checkproduct_checkproduct_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./user/checkproduct/checkproduct.component */ "./src/app/user/checkproduct/checkproduct.component.ts");
+
 
 
 
@@ -473,7 +505,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [
     { path: "", component: _home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"], children: [{ path: "signup", component: _home_signup_signup_component__WEBPACK_IMPORTED_MODULE_4__["SignupComponent"] }] },
-    { path: "user/:id", component: _user_user_component__WEBPACK_IMPORTED_MODULE_5__["UserComponent"], children: [{ path: "account", component: _user_account_account_component__WEBPACK_IMPORTED_MODULE_6__["AccountComponent"] }, { path: "cart", component: _user_cart_cart_component__WEBPACK_IMPORTED_MODULE_7__["CartComponent"] }, { path: "shop", component: _user_shop_shop_component__WEBPACK_IMPORTED_MODULE_8__["ShopComponent"] }] },
+    { path: "user/:id", component: _user_user_component__WEBPACK_IMPORTED_MODULE_5__["UserComponent"], children: [{ path: "account", component: _user_account_account_component__WEBPACK_IMPORTED_MODULE_6__["AccountComponent"] }, { path: "cart", component: _user_cart_cart_component__WEBPACK_IMPORTED_MODULE_7__["CartComponent"] }, { path: "shop", component: _user_shop_shop_component__WEBPACK_IMPORTED_MODULE_8__["ShopComponent"] }, { path: "shop/:id", component: _user_checkproduct_checkproduct_component__WEBPACK_IMPORTED_MODULE_14__["CheckproductComponent"] }] },
     { path: "admin", component: _adminlogin_adminlogin_component__WEBPACK_IMPORTED_MODULE_10__["AdminloginComponent"] },
     { path: "admin/:id", component: _admin_admin_component__WEBPACK_IMPORTED_MODULE_9__["AdminComponent"], children: [{ path: "product", component: _admin_product_product_component__WEBPACK_IMPORTED_MODULE_11__["ProductComponent"] }, { path: "transaction", component: _admin_transaction_transaction_component__WEBPACK_IMPORTED_MODULE_12__["TransactionComponent"] }, { path: "inventory", component: _admin_inventory_inventory_component__WEBPACK_IMPORTED_MODULE_13__["InventoryComponent"] }] }
 ];
@@ -560,6 +592,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _admin_product_product_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./admin/product/product.component */ "./src/app/admin/product/product.component.ts");
 /* harmony import */ var _admin_transaction_transaction_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./admin/transaction/transaction.component */ "./src/app/admin/transaction/transaction.component.ts");
 /* harmony import */ var _admin_inventory_inventory_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./admin/inventory/inventory.component */ "./src/app/admin/inventory/inventory.component.ts");
+/* harmony import */ var _user_checkproduct_checkproduct_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./user/checkproduct/checkproduct.component */ "./src/app/user/checkproduct/checkproduct.component.ts");
+
 
 
 
@@ -594,7 +628,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _adminlogin_adminlogin_component__WEBPACK_IMPORTED_MODULE_14__["AdminloginComponent"],
             _admin_product_product_component__WEBPACK_IMPORTED_MODULE_15__["ProductComponent"],
             _admin_transaction_transaction_component__WEBPACK_IMPORTED_MODULE_16__["TransactionComponent"],
-            _admin_inventory_inventory_component__WEBPACK_IMPORTED_MODULE_17__["InventoryComponent"]
+            _admin_inventory_inventory_component__WEBPACK_IMPORTED_MODULE_17__["InventoryComponent"],
+            _user_checkproduct_checkproduct_component__WEBPACK_IMPORTED_MODULE_18__["CheckproductComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -736,7 +771,14 @@ let ProductService = class ProductService {
         this.http = http;
     }
     addproduct(product = {}) {
+        console.log(product);
         return this.http.post('/project2/addproduct', product);
+    }
+    getall() {
+        return this.http.get('/project2/getallproduct');
+    }
+    getproductbyid(id) {
+        return this.http.get(`/project2/getproductbyid/${id}`);
     }
 };
 ProductService.ctorParameters = () => [
@@ -876,6 +918,67 @@ CartComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/user/checkproduct/checkproduct.component.css":
+/*!**************************************************************!*\
+  !*** ./src/app/user/checkproduct/checkproduct.component.css ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3VzZXIvY2hlY2twcm9kdWN0L2NoZWNrcHJvZHVjdC5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/user/checkproduct/checkproduct.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/user/checkproduct/checkproduct.component.ts ***!
+  \*************************************************************/
+/*! exports provided: CheckproductComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CheckproductComponent", function() { return CheckproductComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _product_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../product.service */ "./src/app/product.service.ts");
+
+
+
+
+let CheckproductComponent = class CheckproductComponent {
+    constructor(productservice, router, activatedroute) {
+        this.productservice = productservice;
+        this.router = router;
+        this.activatedroute = activatedroute;
+        this.product = {};
+        console.log(this.activatedroute.params['value'].id);
+    }
+    ngOnInit() {
+        this.getproductbyid();
+    }
+    getproductbyid() {
+        this.productservice.getproductbyid(this.activatedroute.params['value'].id).subscribe(result => this.product = result);
+    }
+};
+CheckproductComponent.ctorParameters = () => [
+    { type: _product_service__WEBPACK_IMPORTED_MODULE_3__["ProductService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] }
+];
+CheckproductComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-checkproduct',
+        template: __webpack_require__(/*! raw-loader!./checkproduct.component.html */ "./node_modules/raw-loader/index.js!./src/app/user/checkproduct/checkproduct.component.html"),
+        styles: [__webpack_require__(/*! ./checkproduct.component.css */ "./src/app/user/checkproduct/checkproduct.component.css")]
+    })
+], CheckproductComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/user/shop/shop.component.css":
 /*!**********************************************!*\
   !*** ./src/app/user/shop/shop.component.css ***!
@@ -899,13 +1002,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ShopComponent", function() { return ShopComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _product_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../product.service */ "./src/app/product.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
 
 
 let ShopComponent = class ShopComponent {
-    constructor() { }
+    constructor(productservice, router) {
+        this.productservice = productservice;
+        this.router = router;
+        this.products = {};
+    }
     ngOnInit() {
+        this.getall();
+    }
+    getall() {
+        this.productservice.getall().subscribe(result => {
+            console.log(result);
+            this.products = result;
+        });
     }
 };
+ShopComponent.ctorParameters = () => [
+    { type: _product_service__WEBPACK_IMPORTED_MODULE_2__["ProductService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+];
 ShopComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-shop',

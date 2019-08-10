@@ -16,7 +16,7 @@ export class ProductComponent implements OnInit {
   }
 
   addproduct(){
-      this.productservice(this.product).subscribe();
+      this.productservice.addproduct(this.product).subscribe();
   }
 
 }
