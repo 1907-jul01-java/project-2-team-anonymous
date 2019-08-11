@@ -53,8 +53,5 @@ public class Carts {
         this.cart_id = cart_id;
         this.cost = cost;
     }
-
-    
-
     
 }
