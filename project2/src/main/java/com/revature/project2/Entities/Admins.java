@@ -10,7 +10,7 @@ import org.hibernate.annotations.GenericGenerator;
 public class Admins {
 	
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
     private String adminname;
     private String password;

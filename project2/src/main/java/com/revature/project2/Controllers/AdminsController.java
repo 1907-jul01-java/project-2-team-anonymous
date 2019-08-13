@@ -23,7 +23,6 @@ public class AdminsController {
 		
 	@PostMapping(path="adminlogin")
 	public @ResponseBody Admins adminlogin (@RequestBody Admins admin) {
-		System.out.println(admin);
 		return adminRepository.adminlogin(admin.getAdminname(), admin.getPassword());
 	}
 	

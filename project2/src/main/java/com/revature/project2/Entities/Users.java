@@ -14,7 +14,6 @@ import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table(name = "users")
 public class Users {
 
     @Id
@@ -24,7 +23,7 @@ public class Users {
     private String first;
     private String last;
     private String username;
-    private String psw;
+    private String password;
     private String address;
     private String city;
     private String state;
@@ -68,12 +67,12 @@ public class Users {
         this.username = username;
     }
 
-    public String getPsw() {
-        return psw;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPsw(String psw) {
-        this.psw = psw;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getAddress() {
@@ -124,6 +123,14 @@ public class Users {
         this.cart = cart;
     }
 
+    @Override
+    public String toString() {
+        return "Users [address=" + address + ", age=" + age + ", cart=" + cart + ", city=" + city + ", first=" + first
+                + ", id=" + id + ", last=" + last + ", password=" + password + ", state=" + state + ", username="
+                + username + ", zipcode=" + zipcode + "]";
+    }
+
+    
 
     
 
