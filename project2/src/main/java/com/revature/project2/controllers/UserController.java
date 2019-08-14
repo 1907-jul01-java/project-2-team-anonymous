@@ -11,9 +11,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 
-import com.revature.project2.models.Carts;
+import javax.servlet.http.HttpSession;
+import javax.websocket.Session;
+
 import com.revature.project2.models.Users;
-import com.revature.project2.repos.CartsRepository;
 import com.revature.project2.repos.UsersRepository;
 
 @Controller    // This means that this class is a Controller
@@ -32,9 +33,12 @@ public class UserController {
 	}
 	
 	@PostMapping(path="/login")
-	public @ResponseBody Users login (@RequestBody Users user) {
+	public @ResponseBody Users login (@RequestBody Users user, HttpSession sesh) {
 		System.out.println(user);
-		return userRepository.login(user.getUsername(), user.getPassword());
+		Users loggedUser = userRepository.login(user.getUsername(), user.getPassword());
+		sesh.setAttribute("user",loggedUser);
+		System.out.println(sesh.getAttribute("user"));
+		return loggedUser;
 	}
 	
 	@GetMapping(path="/all")
