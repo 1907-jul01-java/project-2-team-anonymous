@@ -9,7 +9,7 @@
       </blockquote>
       <p>
         {{product.description}}<br>
-        <a [routerLink]="['/routePath']" routerLinkActive="router-link-active" >Add to cart</a><br>
+        <button (click)="addToCart()">Add to cart</button>
       </p>
     </div>
  

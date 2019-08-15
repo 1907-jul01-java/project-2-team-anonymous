@@ -19,16 +19,11 @@ public class Products {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
-    // @ManyToOne(optional = false)
-    // @JoinColumn(name="cart_id", insertable=false, updatable=false)
-    // private Carts cart;
-    @Column(name="name")
     private String name;
     private String image;
     private String description;
     private int price;
     private int quantity;
-    // private String size;
 
     public int getId() {
         return id;
@@ -78,36 +73,11 @@ public class Products {
         this.quantity = quantity;
     }
 
-    // public String getSize() {
-    //     return size;
-    // }
-
-    // public void setSize(String size) {
-    //     this.size = size;
-    // }
 
     @Override
     public String toString() {
         return "Products [description=" + description + ", id=" + id + ", image=" + image + ", name=" + name
                 + ", price=" + price + ", quantity=" + quantity  + "]";
     }
-
-    // public Carts getCart() {
-    //     return cart;
-    // }
-
-    // public void setCart(Carts cart) {
-    //     this.cart = cart;
-    // }
-
-    
-
-    
-
-
-    
-
-    
-
     
 }

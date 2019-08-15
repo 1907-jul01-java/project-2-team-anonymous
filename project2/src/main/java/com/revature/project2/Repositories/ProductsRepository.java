@@ -9,9 +9,8 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
 public interface ProductsRepository extends JpaRepository<Products, Integer> {
-    // @Query("DELETE Products p WHERE p.name =?1")
-    // public Products deleteProduct(String name);
-    // p.image = ?2, p.name = ?3, p.price = ?4, p.quanity = ?5, p.size = ?6 where id = ?7")
+     @Query("Select p from Products p WHERE p.id =?1")
+     public Products findOneById(int id);
    
     @Modifying
     @Transactional

@@ -8,16 +8,9 @@
                 <form (submit)="create()" role="form">
                     <fieldset>
                         <p class="text-uppercase pull-center"> SIGN UP.</p>
+
                         <div class="form-group">
-                            <input name="first name" [(ngModel)]="user.first" id=""
-                                class="form-control input-lg" placeholder="First Name" type="text">
-                        </div>
-                        <div class="form-group">
-                            <input name="last name" [(ngModel)]="user.last" id="lastname"
-                                class="form-control input-lg" placeholder="Last Name" type="text">
-                        </div>
-                        <div class="form-group">
-                            <input name="first name" [(ngModel)]="user.username" id="username"
+                            <input name="user name" [(ngModel)]="user.username" id="username"
                                 class="form-control input-lg" placeholder="UserName" type="text">
                         </div>
                         <div class="form-group">
@@ -25,24 +18,8 @@
                                 [(ngModel)]="user.password" placeholder="Password" type="text">
                         </div>
                         <div class="form-group">
-                            <input name="address" [(ngModel)]="user.address" id="address"
-                                class="form-control input-lg" placeholder="Address" type="text">
-                        </div>
-                        <div class="form-group">
-                            <input name="city" [(ngModel)]="user.city" id="city"
-                                class="form-control input-lg" placeholder="City" type="text">
-                        </div>
-                        <div class="form-group">
-                            <input name="state" id="state" class="form-control input-lg"
-                                [(ngModel)]="user.state" placeholder="State" type="text">
-                        </div>
-                        <div class="form-group">
-                            <input name="zipcode" [(ngModel)]="user.zipcode" id="zipcode"
-                                class="form-control input-lg" placeholder="Zipcode" type="text">
-                        </div>
-                        <div class="form-group">
-                            <input name="age" id="age" class="form-control input-lg"
-                                [(ngModel)]="user.age" placeholder="Age" type="text">
+                            <input name="firstname" [(ngModel)]="user.firstname" id=""
+                                class="form-control input-lg" placeholder="First Name" type="text">
                         </div>
                         <div class="form-check">
                             <label class="form-check-label">

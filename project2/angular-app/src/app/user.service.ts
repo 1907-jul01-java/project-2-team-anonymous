@@ -17,4 +17,12 @@ export class UserService {
         return this.http.post('/project2/login', user);
     }
 
+    checkLogin(id){
+        return this.http.get(`/project2/checklogin/${id}`);
+    }
+
+    logout(){
+        return this.http.get('/project2/logout')
+    }
+
 }

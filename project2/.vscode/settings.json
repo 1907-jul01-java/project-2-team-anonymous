@@ -35,5 +35,11 @@
         }
     ],
 	"java.configuration.updateBuildConfiguration": "automatic",
-	"editor.insertSpaces": true
+    "editor.insertSpaces": true,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    }
 }
