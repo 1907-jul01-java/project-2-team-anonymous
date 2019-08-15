@@ -14,11 +14,11 @@ export class CheckproductComponent implements OnInit {
         console.log(this.activatedroute.params['value'].id);
     }
     ngOnInit() {
-        this. getproductbyid();
+        this.getproductbyid();
     }
 
     getproductbyid() {
-        this.productservice.getproductbyid(this.activatedroute.params['value'].id).subscribe(result => this.product = result)
+        this.productservice.getproductbyid(this.activatedroute.params['value'].id).subscribe(result => this.product = result);
     }
 
 }

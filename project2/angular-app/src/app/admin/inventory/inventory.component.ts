@@ -8,6 +8,7 @@ import { Router } from '@angular/router'
 })
 export class InventoryComponent implements OnInit {
     products: any = {};
+
   constructor(private productservice: ProductService, private router:Router) { }
 
   ngOnInit() {
@@ -18,6 +19,10 @@ export class InventoryComponent implements OnInit {
       this.productservice.getall().subscribe(result => {
         console.log(result);
         this.products = result})
+  }
+
+  delete(id){
+    this.productservice.delete(id).subscribe(() => this.router.navigate(['admin/1/inventory']));
   }
 
 }

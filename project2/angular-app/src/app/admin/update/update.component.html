@@ -1,0 +1,71 @@
+<div class="container">
+    <h2 class="text-center">Update Product</h2>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6 pb-5">
+            <!--Form with header-->
+            <form (submit)="update(product.id)">
+                <div class="card border-primary rounded-0">
+                    <div class="card-header p-0">
+                        <div class="bg-info text-white text-center py-2">
+                            <h3><i class="fa fa-comment text-info"></i>Product</h3>
+                        </div>
+                    </div>
+                    <div class="card-body p-3">
+                        <!--Body-->
+                        <div class="form-group">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
+                                </div>
+                                <input type="text" [(ngModel)]="updateproduct.name" name="name" class="form-control"
+                                    placeholder="name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
+                                </div>
+                                <input type="number" [(ngModel)]="updateproduct.quantity" name="quantity" class="form-control"
+                                    placeholder="quantities" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
+                                </div>
+                                <input type="text" [(ngModel)]="updateproduct.image" name="image" class="form-control"
+                                    placeholder="image url" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
+                                </div>
+                                <input type="number" [(ngModel)]="updateproduct.price" name="price" class="form-control"
+                                    placeholder="price" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
+                                </div>
+                                <textarea [(ngModel)]="updateproduct.description" name="description" class="form-control"
+                                    placeholder="Enter Description" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <input type="submit" value="Update Product" class="btn btn-info btn-block rounded-0 py-2">
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+            <!--Form with header-->
+        </div>
+    </div>
+</div>

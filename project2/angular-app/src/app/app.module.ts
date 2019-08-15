@@ -16,6 +16,7 @@ import { ProductComponent } from './admin/product/product.component';
 import { TransactionComponent } from './admin/transaction/transaction.component';
 import { InventoryComponent } from './admin/inventory/inventory.component';
 import { CheckproductComponent } from './user/checkproduct/checkproduct.component';
+import { UpdateComponent } from './admin/update/update.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CheckproductComponent } from './user/checkproduct/checkproduct.componen
     ProductComponent,
     TransactionComponent,
     InventoryComponent,
-    CheckproductComponent
+    CheckproductComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,

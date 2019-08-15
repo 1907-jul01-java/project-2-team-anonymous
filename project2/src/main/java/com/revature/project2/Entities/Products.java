@@ -14,7 +14,6 @@ import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.ManyToAny;
 
 @Entity
-@Table(name = "products")
 public class Products {
 
     @Id
@@ -29,7 +28,7 @@ public class Products {
     private String description;
     private int price;
     private int quantity;
-    private String size;
+    // private String size;
 
     public int getId() {
         return id;
@@ -79,18 +78,18 @@ public class Products {
         this.quantity = quantity;
     }
 
-    public String getSize() {
-        return size;
-    }
+    // public String getSize() {
+    //     return size;
+    // }
 
-    public void setSize(String size) {
-        this.size = size;
-    }
+    // public void setSize(String size) {
+    //     this.size = size;
+    // }
 
     @Override
     public String toString() {
         return "Products [description=" + description + ", id=" + id + ", image=" + image + ", name=" + name
-                + ", price=" + price + ", quantity=" + quantity + ", size=" + size + "]";
+                + ", price=" + price + ", quantity=" + quantity  + "]";
     }
 
     // public Carts getCart() {

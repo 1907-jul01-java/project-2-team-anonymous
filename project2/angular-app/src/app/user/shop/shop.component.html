@@ -7,20 +7,18 @@
                     <a href="#" class="list-group-item">
                         <div class="media col-md-3">
                             <figure class="pull-left">
-                                <a [routerLink]="[product.id]">
-                                    <img class="media-object img-rounded img-responsive" src="https://www.tactics.com/a/93ep/2/nike-sb-logo-dri-fit-t-shirt-white-black.webp"
-                                        alt="placehold.it/350x250">
-                                </a>
+                                <img [src]="product.image">
                             </figure>
                         </div>
-                        <div class="col-md-6">
-                            <h4 class="list-group-item-heading"> {{product.name}} </h4>
-                            <p class="list-group-item-text">Description: {{product.description}}</p><br>
-                            <p class="list-group-item-text">Price: ${{product.price}}</p>
-                        </div>
+                            <div class="col-md-6">
+                                <a [routerLink]="['shop', product.id]"><h4 class="list-group-item-heading"> {{product.name}} </h4></a>
+                                <p class="list-group-item-text"> {{product.description}}</p>
+                                <p class="list-group-item-text"> {{product.price}}</p>
+                            </div>
                     </a>
                     <hr>
                 </li>
             </ul>
         </div>
     </div>
+</div>

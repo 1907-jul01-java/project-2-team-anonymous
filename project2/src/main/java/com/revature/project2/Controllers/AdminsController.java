@@ -20,7 +20,7 @@ public class AdminsController {
 	@Autowired 
 	
 	AdminsRepository adminRepository;
-		
+	
 	@PostMapping(path="adminlogin")
 	public @ResponseBody Admins adminlogin (@RequestBody Admins admin) {
 		return adminRepository.adminlogin(admin.getAdminname(), admin.getPassword());

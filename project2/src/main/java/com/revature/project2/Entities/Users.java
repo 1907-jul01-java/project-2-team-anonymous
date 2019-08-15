@@ -29,9 +29,9 @@ public class Users {
     private String state;
     private String zipcode;
     private int age;
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "cart_id")
-    private Carts cart;
+    // @OneToOne(cascade = CascadeType.ALL)
+    // @JoinColumn(name = "cart_id")
+    // private Carts cart;
     // @OneToMany(cascade = CascadeType.ALL)
     // @JoinColumn(name = "transaction")
 
@@ -115,26 +115,19 @@ public class Users {
         this.age = age;
     }
 
-    public Carts getCart() {
-        return cart;
-    }
+    // public Carts getCart() {
+    //     return cart;
+    // }
 
-    public void setCart(Carts cart) {
-        this.cart = cart;
-    }
+    // public void setCart(Carts cart) {
+    //     this.cart = cart;
+    // }
 
-    @Override
-    public String toString() {
-        return "Users [address=" + address + ", age=" + age + ", cart=" + cart + ", city=" + city + ", first=" + first
-                + ", id=" + id + ", last=" + last + ", password=" + password + ", state=" + state + ", username="
-                + username + ", zipcode=" + zipcode + "]";
-    }
+    // @Override
+    // public String toString() {
+    //     return "Users [address=" + address + ", age=" + age + ", cart=" + cart + ", city=" + city + ", first=" + first
+    //             + ", id=" + id + ", last=" + last + ", password=" + password + ", state=" + state + ", username="
+    //             + username + ", zipcode=" + zipcode + "]";
+    // }
 
-    
-
-    
-
-    
-
-    
 }

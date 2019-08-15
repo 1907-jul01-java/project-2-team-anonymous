@@ -41,7 +41,7 @@ module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark sideb
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"well\">\r\n            <h1 class=\"text-center\">Products</h1>\r\n            <ul *ngFor=\"let product of products\" class=\"list-group\" style=\"list-style: none;\">\r\n                <li>\r\n                    <a href=\"#\" class=\"list-group-item\">\r\n                        <div class=\"media col-md-3\">\r\n                            <figure class=\"pull-left\">\r\n                                <img [src]=\"product.image\">\r\n                            </figure>\r\n                        </div>\r\n                        <div class=\"col-md-6\">\r\n                            <h4 class=\"list-group-item-heading\"> {{product.name}} </h4>\r\n                            <p class=\"list-group-item-text\"> {{product.description}}</p>\r\n                            <p class=\"list-group-item-text\"> {{product.price}}\r\n                            </p>\r\n                        </div>\r\n                    </a>\r\n                    <hr>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>"
+module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"well\">\r\n            <h1 class=\"text-center\">Products</h1>\r\n            <ul *ngFor=\"let product of products\" class=\"list-group\" style=\"list-style: none;\">\r\n                <li>\r\n                    <a href=\"#\" class=\"list-group-item\">\r\n                        <div class=\"media col-md-3\">\r\n                            <figure class=\"pull-left\">\r\n                                <img [src]=\"product.image\">\r\n                            </figure>\r\n                        </div>\r\n                        <div class=\"col-md-6\">\r\n                            <a [routerLink]=\"['update', product.id]\"><h4 class=\"list-group-item-heading\"> {{product.name}} </h4></a>\r\n                            <p class=\"list-group-item-text\"> {{product.description}}</p>\r\n                            <p class=\"list-group-item-text\"> {{product.price}}</p>\r\n                            <button (click)=\"delete(product.id)\">Delete Product</button>\r\n                        </div>\r\n                    </a>\r\n                    <hr>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -64,6 +64,17 @@ module.exports = "<div class=\"container\">\r\n    <h2 class=\"text-center\">Add
 /***/ (function(module, exports) {
 
 module.exports = "<p>transaction works!</p>\r\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/admin/update/update.component.html":
+/*!******************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/admin/update/update.component.html ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n    <h2 class=\"text-center\">Update Product</h2>\n    <div class=\"row justify-content-center\">\n        <div class=\"col-12 col-md-8 col-lg-6 pb-5\">\n            <!--Form with header-->\n            <form (submit)=\"update(product.id)\">\n                <div class=\"card border-primary rounded-0\">\n                    <div class=\"card-header p-0\">\n                        <div class=\"bg-info text-white text-center py-2\">\n                            <h3><i class=\"fa fa-comment text-info\"></i>Product</h3>\n                        </div>\n                    </div>\n                    <div class=\"card-body p-3\">\n                        <!--Body-->\n                        <div class=\"form-group\">\n                            <div class=\"input-group mb-2\">\n                                <div class=\"input-group-prepend\">\n                                    <div class=\"input-group-text\"><i class=\"fa fa-comment text-info\"></i></div>\n                                </div>\n                                <input type=\"text\" [(ngModel)]=\"updateproduct.name\" name=\"name\" class=\"form-control\"\n                                    placeholder=\"name\" required>\n                            </div>\n                        </div>\n                        <div class=\"form-group\">\n                            <div class=\"input-group mb-2\">\n                                <div class=\"input-group-prepend\">\n                                    <div class=\"input-group-text\"><i class=\"fa fa-comment text-info\"></i></div>\n                                </div>\n                                <input type=\"number\" [(ngModel)]=\"updateproduct.quantity\" name=\"quantity\" class=\"form-control\"\n                                    placeholder=\"quantities\" required>\n                            </div>\n                        </div>\n                        <div class=\"form-group\">\n                            <div class=\"input-group mb-2\">\n                                <div class=\"input-group-prepend\">\n                                    <div class=\"input-group-text\"><i class=\"fa fa-comment text-info\"></i></div>\n                                </div>\n                                <input type=\"text\" [(ngModel)]=\"updateproduct.image\" name=\"image\" class=\"form-control\"\n                                    placeholder=\"image url\" required>\n                            </div>\n                        </div>\n                        <div class=\"form-group\">\n                            <div class=\"input-group mb-2\">\n                                <div class=\"input-group-prepend\">\n                                    <div class=\"input-group-text\"><i class=\"fa fa-comment text-info\"></i></div>\n                                </div>\n                                <input type=\"number\" [(ngModel)]=\"updateproduct.price\" name=\"price\" class=\"form-control\"\n                                    placeholder=\"price\" required>\n                            </div>\n                        </div>\n                        <div class=\"form-group\">\n                            <div class=\"input-group mb-2\">\n                                <div class=\"input-group-prepend\">\n                                    <div class=\"input-group-text\"><i class=\"fa fa-comment text-info\"></i></div>\n                                </div>\n                                <textarea [(ngModel)]=\"updateproduct.description\" name=\"description\" class=\"form-control\"\n                                    placeholder=\"Enter Description\" required></textarea>\n                            </div>\n                        </div>\n\n                        <div class=\"text-center\">\n                            <input type=\"submit\" value=\"Update Product\" class=\"btn btn-info btn-block rounded-0 py-2\">\n                        </div>\n                    </div>\n\n                </div>\n            </form>\n            <!--Form with header-->\n        </div>\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -107,7 +118,7 @@ module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark sideb
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\r\n    <div class=\"container\">\r\n        <h2 class=\"text-center\" id=\"title\">Anonymous</h2>\r\n\r\n        <hr>\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <form (submit)=\"create()\" role=\"form\">\r\n                    <fieldset>\r\n                        <p class=\"text-uppercase pull-center\"> SIGN UP.</p>\r\n                        <div class=\"form-group\">\r\n                            <input name=\"first name\" [(ngModel)]=\"user.first\" id=\"\"\r\n                                class=\"form-control input-lg\" placeholder=\"First Name\" type=\"text\">\r\n                        </div>\r\n                        <div class=\"form-group\">\r\n                            <input name=\"last name\" [(ngModel)]=\"user.last\" id=\"lastname\"\r\n                                class=\"form-control input-lg\" placeholder=\"Last Name\" type=\"text\">\r\n                        </div>\r\n                        <div class=\"form-group\">\r\n                            <input name=\"first name\" [(ngModel)]=\"user.username\" id=\"username\"\r\n                                class=\"form-control input-lg\" placeholder=\"UserName\" type=\"text\">\r\n                        </div>\r\n                        <div class=\"form-group\">\r\n                            <input name=\"password\" id=\"password2\" class=\"form-control input-lg\"\r\n                                [(ngModel)]=\"user.password\" placeholder=\"Password\" type=\"text\">\r\n                        </div>\r\n                        <div class=\"form-group\">\r\n                            <input name=\"address\" [(ngModel)]=\"user.address\" id=\"address\"\r\n                                class=\"form-control input-lg\" placeholder=\"Address\" type=\"text\">\r\n                        </div>\r\n                        <div class=\"form-group\">\r\n                            <input name=\"city\" [(ngModel)]=\"user.city\" id=\"city\"\r\n                                class=\"form-control input-lg\" placeholder=\"City\" type=\"text\">\r\n                        </div>\r\n                        <div class=\"form-group\">\r\n                            <input name=\"state\" id=\"state\" class=\"form-control input-lg\"\r\n                                [(ngModel)]=\"user.state\" placeholder=\"State\" type=\"text\">\r\n                        </div>\r\n                        <div class=\"form-group\">\r\n                            <input name=\"zipcode\" [(ngModel)]=\"user.zipcode\" id=\"zipcode\"\r\n                                class=\"form-control input-lg\" placeholder=\"Zipcode\" type=\"text\">\r\n                        </div>\r\n                        <div class=\"form-group\">\r\n                            <input name=\"age\" id=\"age\" class=\"form-control input-lg\"\r\n                                [(ngModel)]=\"user.age\" placeholder=\"Age\" type=\"text\">\r\n                        </div>\r\n                        <div class=\"form-check\">\r\n                            <label class=\"form-check-label\">\r\n                                <input type=\"checkbox\" class=\"form-check-input\">\r\n                                By Clicking register you're agree to our policy & terms\r\n                            </label>\r\n                        </div>\r\n                        <div>\r\n                            <input type=\"submit\" class=\"btn btn-primary\" value=\" Register\">\r\n                        </div>\r\n                    </fieldset>\r\n                </form>\r\n            </div>\r\n\r\n            <div class=\"col-md-2\">\r\n                <!-------null------>\r\n            </div>\r\n\r\n            <div class=\"col-md-5\">\r\n                <form (submit)=\"login()\" role=\"form\" >\r\n                    <fieldset>\r\n                        <p class=\"text-uppercase\"> Login using your account: </p>\r\n\r\n                        <div class=\"form-group\">\r\n                            <input type=\"email\" name=\"username\" [(ngModel)]=\"loginUser.username\" id=\"username\" class=\"form-control input-lg\"\r\n                                placeholder=\"username\">\r\n                        </div>\r\n                        <div class=\"form-group\">\r\n                            <input type=\"password\" name=\"password\" [(ngModel)]=\"loginUser.password\" id=\"password\" class=\"form-control input-lg\"\r\n                                placeholder=\"Password\">\r\n                        </div>\r\n                        <div>\r\n                            <!-- <input type=\"submit\" class=\"btn btn-success\" value=\"Sign In\"> -->\r\n                            <input type=\"submit\" class=\"btn btn-primary\" value=\" Login\">\r\n                        </div>\r\n\r\n                    </fieldset>\r\n                </form>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"container-fluid\">\r\n    <div class=\"container\">\r\n        <h2 class=\"text-center\" id=\"title\">Anonymous</h2>\r\n\r\n        <hr>\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <form (submit)=\"create()\" role=\"form\">\r\n                    <fieldset>\r\n                        <p class=\"text-uppercase pull-center\"> SIGN UP.</p>\r\n                        <div class=\"form-group\">\r\n                            <input name=\"first name\" [(ngModel)]=\"user.first\" id=\"\"\r\n                                class=\"form-control input-lg\" placeholder=\"First Name\" type=\"text\">\r\n                        </div>\r\n                        <div class=\"form-group\">\r\n                            <input name=\"last name\" [(ngModel)]=\"user.last\" id=\"lastname\"\r\n                                class=\"form-control input-lg\" placeholder=\"Last Name\" type=\"text\">\r\n                        </div>\r\n                        <div class=\"form-group\">\r\n                            <input name=\"first name\" [(ngModel)]=\"user.username\" id=\"username\"\r\n                                class=\"form-control input-lg\" placeholder=\"UserName\" type=\"text\">\r\n                        </div>\r\n                        <div class=\"form-group\">\r\n                            <input name=\"password\" id=\"password2\" class=\"form-control input-lg\"\r\n                                [(ngModel)]=\"user.password\" placeholder=\"Password\" type=\"text\">\r\n                        </div>\r\n                        <div class=\"form-group\">\r\n                            <input name=\"address\" [(ngModel)]=\"user.address\" id=\"address\"\r\n                                class=\"form-control input-lg\" placeholder=\"Address\" type=\"text\">\r\n                        </div>\r\n                        <div class=\"form-group\">\r\n                            <input name=\"city\" [(ngModel)]=\"user.city\" id=\"city\"\r\n                                class=\"form-control input-lg\" placeholder=\"City\" type=\"text\">\r\n                        </div>\r\n                        <div class=\"form-group\">\r\n                            <input name=\"state\" id=\"state\" class=\"form-control input-lg\"\r\n                                [(ngModel)]=\"user.state\" placeholder=\"State\" type=\"text\">\r\n                        </div>\r\n                        <div class=\"form-group\">\r\n                            <input name=\"zipcode\" [(ngModel)]=\"user.zipcode\" id=\"zipcode\"\r\n                                class=\"form-control input-lg\" placeholder=\"Zipcode\" type=\"text\">\r\n                        </div>\r\n                        <div class=\"form-group\">\r\n                            <input name=\"age\" id=\"age\" class=\"form-control input-lg\"\r\n                                [(ngModel)]=\"user.age\" placeholder=\"Age\" type=\"text\">\r\n                        </div>\r\n                        <div class=\"form-check\">\r\n                            <label class=\"form-check-label\">\r\n                                <input type=\"checkbox\" class=\"form-check-input\">\r\n                                By Clicking register you're agree to our policy & terms\r\n                            </label>\r\n                        </div>\r\n                        <div>\r\n                            <input type=\"submit\" class=\"btn btn-primary\" value=\" Register\">\r\n                        </div>\r\n                    </fieldset>\r\n                </form>\r\n            </div>\r\n\r\n            <div class=\"col-md-2\">\r\n                <!-------null------>\r\n            </div>\r\n\r\n            <div class=\"col-md-5\">\r\n                <form (submit)=\"login()\" role=\"form\" >\r\n                    <fieldset>\r\n                        <p class=\"text-uppercase\"> Login using your account: </p>\r\n\r\n                        <div class=\"form-group\">\r\n                            <input type=\"email\" name=\"username\" [(ngModel)]=\"loginUser.username\" id=\"username\" class=\"form-control input-lg\"\r\n                                placeholder=\"username\">\r\n                        </div>\r\n                        <div class=\"form-group\">\r\n                            <input type=\"password\" name=\"password\" [(ngModel)]=\"loginUser.password\" id=\"password\" class=\"form-control input-lg\"\r\n                                placeholder=\"Password\">\r\n                        </div>\r\n                        <div>\r\n                            <!-- <input type=\"submit\" class=\"btn btn-success\" value=\"Sign In\"> -->\r\n                            <input type=\"submit\" class=\"btn btn-primary\" value=\" Login\">\r\n                        </div>\r\n                    </fieldset>\r\n                </form>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -140,7 +151,7 @@ module.exports = "<div class=\"container\">\r\n\t<table id=\"cart\" class=\"tabl
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"span2\">\r\n      <img src=\"https://www.tactics.com/a/93ep/2/nike-sb-logo-dri-fit-t-shirt-white-black.webp\"  alt=\"\" class=\"img-rounded\">\r\n    </div>\r\n    <div class=\"span4\">\r\n      <blockquote>\r\n        <p>{{product.name}}</p>\r\n      </blockquote>\r\n      <p>\r\n        {{product.description}}<br>\r\n        <a [routerLink]=\"['/routePath']\" routerLinkActive=\"router-link-active\" >Add to cart</a><br>\r\n      </p>\r\n    </div>\r\n "
+module.exports = "<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"span2\">\r\n      <img src=\"{{product.image}}\"  alt=\"\" class=\"img-rounded\">\r\n    </div>\r\n    <div class=\"span4\">\r\n      <blockquote>\r\n        <p>{{product.name}}</p>\r\n      </blockquote>\r\n      <p>\r\n        {{product.description}}<br>\r\n        <a [routerLink]=\"['/routePath']\" routerLinkActive=\"router-link-active\" >Add to cart</a><br>\r\n      </p>\r\n    </div>\r\n "
 
 /***/ }),
 
@@ -151,7 +162,7 @@ module.exports = "<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"well\">\r\n            <h1 class=\"text-center\">Products</h1>\r\n            <ul *ngFor=\"let product of products\" class=\"list-group\" style=\"list-style: none;\">\r\n                <li>\r\n                    <a href=\"#\" class=\"list-group-item\">\r\n                        <div class=\"media col-md-3\">\r\n                            <figure class=\"pull-left\">\r\n                                <a [routerLink]=\"[product.id]\">\r\n                                    <img class=\"media-object img-rounded img-responsive\" src=\"https://www.tactics.com/a/93ep/2/nike-sb-logo-dri-fit-t-shirt-white-black.webp\"\r\n                                        alt=\"placehold.it/350x250\">\r\n                                </a>\r\n                            </figure>\r\n                        </div>\r\n                        <div class=\"col-md-6\">\r\n                            <h4 class=\"list-group-item-heading\"> {{product.name}} </h4>\r\n                            <p class=\"list-group-item-text\">Description: {{product.description}}</p><br>\r\n                            <p class=\"list-group-item-text\">Price: ${{product.price}}</p>\r\n                        </div>\r\n                    </a>\r\n                    <hr>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>"
+module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"well\">\r\n            <h1 class=\"text-center\">Products</h1>\r\n            <ul *ngFor=\"let product of products\" class=\"list-group\" style=\"list-style: none;\">\r\n                <li>\r\n                    <a href=\"#\" class=\"list-group-item\">\r\n                        <div class=\"media col-md-3\">\r\n                            <figure class=\"pull-left\">\r\n                                <img [src]=\"product.image\">\r\n                            </figure>\r\n                        </div>\r\n                            <div class=\"col-md-6\">\r\n                                <a [routerLink]=\"['shop', product.id]\"><h4 class=\"list-group-item-heading\"> {{product.name}} </h4></a>\r\n                                <p class=\"list-group-item-text\"> {{product.description}}</p>\r\n                                <p class=\"list-group-item-text\"> {{product.price}}</p>\r\n                            </div>\r\n                    </a>\r\n                    <hr>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -162,7 +173,7 @@ module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n      
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark sidebarNavigation\" data-sidebarClass=\"navbar-dark bg-dark\">\r\n        <div class=\"container-fluid\">\r\n        <a class=\"navbar-brand\" href=\"#\">Anonymous</a>\r\n        <button class=\"navbar-toggler leftNavbarToggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\"\r\n            aria-controls=\"navbarsExampleDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n            <span class=\"navbar-toggler-icon\"></span>\r\n        </button>\r\n\r\n        <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\">\r\n            <ul class=\"nav navbar-nav nav-flex-icons ml-auto\">\r\n                <li class=\"nav-item\">\r\n                    <a class=\"nav-link\" [routerLink]=\"['account']\">Account </a>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n                    <a class=\"nav-link\" [routerLink]=\"['shop']\">Shop</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li class=\"nav-item\">\r\n                    <a class=\"nav-link\" [routerLink]=\"['cart']\">Cart(0)</a>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n\t\t\t\t\t <a class=\"nav-link\" [routerLink]=\"['']\" >Log Out</a>\r\n                </li>\r\n\t\t\t</ul>\r\n           <!--  <form class=\"form-inline my-2 my-lg-0\">\r\n                <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" aria-label=\"Search\">\r\n                <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n            </form> -->\r\n        </div>\r\n    </div>\r\n</nav>\r\n<router-outlet></router-outlet>"
+module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark sidebarNavigation\" data-sidebarClass=\"navbar-dark bg-dark\">\r\n        <div class=\"container-fluid\">\r\n        <a class=\"navbar-brand\" href=\"#\">Anonymous</a>\r\n        <button class=\"navbar-toggler leftNavbarToggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\"\r\n            aria-controls=\"navbarsExampleDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n            <span class=\"navbar-toggler-icon\"></span>\r\n        </button>\r\n\r\n        <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\">\r\n            <ul class=\"nav navbar-nav nav-flex-icons ml-auto\">\r\n                <li class=\"nav-item\">\r\n                    <a class=\"nav-link\" [routerLink]=\"['account']\">Account </a>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n                    <a class=\"nav-link\" [routerLink]=\"['shop']\">Shop</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li class=\"nav-item\">\r\n                    <a class=\"nav-link\" [routerLink]=\"['cart']\">Cart</a>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n\t\t\t\t\t <a class=\"nav-link\" [routerLink]=\"['']\" >Log Out</a>\r\n                </li>\r\n\t\t\t</ul>\r\n           <!--  <form class=\"form-inline my-2 my-lg-0\">\r\n                <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" aria-label=\"Search\">\r\n                <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n            </form> -->\r\n        </div>\r\n    </div>\r\n</nav>\r\n<router-outlet></router-outlet>"
 
 /***/ }),
 
@@ -290,6 +301,9 @@ let InventoryComponent = class InventoryComponent {
             this.products = result;
         });
     }
+    delete(id) {
+        this.productservice.delete(id).subscribe(() => this.router.navigate(['admin/1/inventory']));
+    }
 };
 InventoryComponent.ctorParameters = () => [
     { type: _product_service__WEBPACK_IMPORTED_MODULE_2__["ProductService"] },
@@ -347,6 +361,9 @@ let ProductComponent = class ProductComponent {
     addproduct() {
         this.productservice.addproduct(this.product).subscribe();
     }
+    delete() {
+        this.productservice.delete(this.product).subscribe();
+    }
 };
 ProductComponent.ctorParameters = () => [
     { type: _product_service__WEBPACK_IMPORTED_MODULE_2__["ProductService"] },
@@ -401,6 +418,70 @@ TransactionComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [__webpack_require__(/*! ./transaction.component.css */ "./src/app/admin/transaction/transaction.component.css")]
     })
 ], TransactionComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/update/update.component.css":
+/*!***************************************************!*\
+  !*** ./src/app/admin/update/update.component.css ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3VwZGF0ZS91cGRhdGUuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/admin/update/update.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/admin/update/update.component.ts ***!
+  \**************************************************/
+/*! exports provided: UpdateComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UpdateComponent", function() { return UpdateComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _product_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../product.service */ "./src/app/product.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
+
+
+let UpdateComponent = class UpdateComponent {
+    constructor(productservice, router, activatedroute) {
+        this.productservice = productservice;
+        this.router = router;
+        this.activatedroute = activatedroute;
+        this.product = {};
+        this.updateproduct = {};
+    }
+    ngOnInit() {
+        this.getproductbyid();
+    }
+    getproductbyid() {
+        this.productservice.getproductbyid(this.activatedroute.params['value'].id).subscribe(result => this.product = result);
+    }
+    update(id) {
+        this.productservice.update(id, this.updateproduct).subscribe(() => this.router.navigate(['admin/1/inventory']));
+    }
+};
+UpdateComponent.ctorParameters = () => [
+    { type: _product_service__WEBPACK_IMPORTED_MODULE_2__["ProductService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] }
+];
+UpdateComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-update',
+        template: __webpack_require__(/*! raw-loader!./update.component.html */ "./node_modules/raw-loader/index.js!./src/app/admin/update/update.component.html"),
+        styles: [__webpack_require__(/*! ./update.component.css */ "./src/app/admin/update/update.component.css")]
+    })
+], UpdateComponent);
 
 
 
@@ -488,6 +569,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _admin_transaction_transaction_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./admin/transaction/transaction.component */ "./src/app/admin/transaction/transaction.component.ts");
 /* harmony import */ var _admin_inventory_inventory_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./admin/inventory/inventory.component */ "./src/app/admin/inventory/inventory.component.ts");
 /* harmony import */ var _user_checkproduct_checkproduct_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./user/checkproduct/checkproduct.component */ "./src/app/user/checkproduct/checkproduct.component.ts");
+/* harmony import */ var _admin_update_update_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./admin/update/update.component */ "./src/app/admin/update/update.component.ts");
+
 
 
 
@@ -505,9 +588,10 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [
     { path: "", component: _home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"], children: [{ path: "signup", component: _home_signup_signup_component__WEBPACK_IMPORTED_MODULE_4__["SignupComponent"] }] },
-    { path: "user/:id", component: _user_user_component__WEBPACK_IMPORTED_MODULE_5__["UserComponent"], children: [{ path: "account", component: _user_account_account_component__WEBPACK_IMPORTED_MODULE_6__["AccountComponent"] }, { path: "cart", component: _user_cart_cart_component__WEBPACK_IMPORTED_MODULE_7__["CartComponent"] }, { path: "shop", component: _user_shop_shop_component__WEBPACK_IMPORTED_MODULE_8__["ShopComponent"] }, { path: "shop/:id", component: _user_checkproduct_checkproduct_component__WEBPACK_IMPORTED_MODULE_14__["CheckproductComponent"] }] },
+    { path: "user/:id", component: _user_user_component__WEBPACK_IMPORTED_MODULE_5__["UserComponent"], children: [{ path: "account", component: _user_account_account_component__WEBPACK_IMPORTED_MODULE_6__["AccountComponent"] }, { path: "cart", component: _user_cart_cart_component__WEBPACK_IMPORTED_MODULE_7__["CartComponent"] }, { path: "shop", component: _user_shop_shop_component__WEBPACK_IMPORTED_MODULE_8__["ShopComponent"] }, { path: "shop/shop/:id", component: _user_checkproduct_checkproduct_component__WEBPACK_IMPORTED_MODULE_14__["CheckproductComponent"] }] },
     { path: "admin", component: _adminlogin_adminlogin_component__WEBPACK_IMPORTED_MODULE_10__["AdminloginComponent"] },
-    { path: "admin/:id", component: _admin_admin_component__WEBPACK_IMPORTED_MODULE_9__["AdminComponent"], children: [{ path: "product", component: _admin_product_product_component__WEBPACK_IMPORTED_MODULE_11__["ProductComponent"] }, { path: "transaction", component: _admin_transaction_transaction_component__WEBPACK_IMPORTED_MODULE_12__["TransactionComponent"] }, { path: "inventory", component: _admin_inventory_inventory_component__WEBPACK_IMPORTED_MODULE_13__["InventoryComponent"] }] }
+    { path: "admin/:id", component: _admin_admin_component__WEBPACK_IMPORTED_MODULE_9__["AdminComponent"], children: [{ path: "product", component: _admin_product_product_component__WEBPACK_IMPORTED_MODULE_11__["ProductComponent"] }, { path: "transaction", component: _admin_transaction_transaction_component__WEBPACK_IMPORTED_MODULE_12__["TransactionComponent"] }, { path: "inventory", component: _admin_inventory_inventory_component__WEBPACK_IMPORTED_MODULE_13__["InventoryComponent"] }] },
+    { path: "admin/:id", component: _admin_admin_component__WEBPACK_IMPORTED_MODULE_9__["AdminComponent"], children: [{ path: "inventory", component: _admin_inventory_inventory_component__WEBPACK_IMPORTED_MODULE_13__["InventoryComponent"] }, { path: "inventory", component: _admin_inventory_inventory_component__WEBPACK_IMPORTED_MODULE_13__["InventoryComponent"] }, { path: "inventory/update/:id", component: _admin_update_update_component__WEBPACK_IMPORTED_MODULE_15__["UpdateComponent"] }] },
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
@@ -593,6 +677,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _admin_transaction_transaction_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./admin/transaction/transaction.component */ "./src/app/admin/transaction/transaction.component.ts");
 /* harmony import */ var _admin_inventory_inventory_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./admin/inventory/inventory.component */ "./src/app/admin/inventory/inventory.component.ts");
 /* harmony import */ var _user_checkproduct_checkproduct_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./user/checkproduct/checkproduct.component */ "./src/app/user/checkproduct/checkproduct.component.ts");
+/* harmony import */ var _admin_update_update_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./admin/update/update.component */ "./src/app/admin/update/update.component.ts");
+
 
 
 
@@ -629,7 +715,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _admin_product_product_component__WEBPACK_IMPORTED_MODULE_15__["ProductComponent"],
             _admin_transaction_transaction_component__WEBPACK_IMPORTED_MODULE_16__["TransactionComponent"],
             _admin_inventory_inventory_component__WEBPACK_IMPORTED_MODULE_17__["InventoryComponent"],
-            _user_checkproduct_checkproduct_component__WEBPACK_IMPORTED_MODULE_18__["CheckproductComponent"]
+            _user_checkproduct_checkproduct_component__WEBPACK_IMPORTED_MODULE_18__["CheckproductComponent"],
+            _admin_update_update_component__WEBPACK_IMPORTED_MODULE_19__["UpdateComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -774,11 +861,19 @@ let ProductService = class ProductService {
         console.log(product);
         return this.http.post('/project2/addproduct', product);
     }
+    delete(id) {
+        console.log(id);
+        return this.http.get(`/project2/delete/${id}`);
+    }
     getall() {
         return this.http.get('/project2/getallproduct');
     }
     getproductbyid(id) {
         return this.http.get(`/project2/getproductbyid/${id}`);
+    }
+    update(id, product = {}) {
+        console.log(id);
+        return this.http.post(`/project2/update/${id}`, product);
     }
 };
 ProductService.ctorParameters = () => [
