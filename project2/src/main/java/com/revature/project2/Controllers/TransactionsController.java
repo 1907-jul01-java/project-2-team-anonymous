@@ -73,4 +73,10 @@ public class TransactionsController {
 			}
 		}
 	}
+	
+	@PostMapping(path = "/checkout/{id}")
+	public @ResponseBody void checkout(@PathVariable @NotNull int id, int totalcost) {
+		System.out.println(id);
+		System.out.println(totalcost);
+	}
 }

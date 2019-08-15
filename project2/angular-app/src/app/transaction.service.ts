@@ -10,4 +10,8 @@ export class TransactionService {
   addToCart(id){
       return this.http.get(`project2/addtocart/${id}`)
   }
+
+  checkOut(id, totalcost){
+      return this.http.post(`project2/checkout/${id}`, {"totalcost": totalcost})
+  }
 }

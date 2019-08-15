@@ -140,7 +140,7 @@ module.exports = "<div class=\"container\">\r\n\r\n\t<div class=\"row\">\r\n\t\t
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <ng-container *ngFor=\"let product of this.current_cart.products\">\r\n        <table id=\"cart\" class=\"table table-hover table-condensed\">\r\n            <tbody>\r\n                <tr>\r\n                    <td data-th=\"Product\">\r\n                        <div class=\"row\">\r\n                            <div class=\"col-sm-2 hidden-xs\"><img src=\"{{product.image}}\" alt=\"...\"\r\n                                    class=\"img-responsive\" /></div>\r\n                            <div class=\"col-sm-10\">\r\n                                <h4 class=\"nomargin\">{{product.name}}</h4>\r\n                                <p>{{product.description}}</p>\r\n                            </div>\r\n                        </div>\r\n                    </td>\r\n                    <td data-th=\"Price\">${{product.price}}</td>\r\n                    <td data-th=\"Subtotal\" class=\"text-center\">${{product.price}}</td>\r\n                    <td class=\"actions\" data-th=\"\">\r\n                        <button class=\"btn btn-danger btn-sm\"><i class=\"fa fa-trash-o\">Delete</i></button>\r\n                    </td>\r\n                </tr>\r\n            </tbody>\r\n        </table>\r\n    </ng-container>\r\n    <tfoot>\r\n        <tr>\r\n            <td><a href=\"#\" class=\"btn btn-warning\"><i class=\"fa fa-angle-left\"></i> Continue Shopping</a></td>\r\n            <td colspan=\"2\" class=\"hidden-xs\"></td>\r\n            <td class=\"hidden-xs text-center\"><strong>Total $150.00</strong></td>\r\n            <td><a href=\"Placeholderatthemoment\" class=\"btn btn-success btn-block\">Checkout <i\r\n                        class=\"fa fa-angle-right\"></i></a></td>\r\n        </tr>\r\n    </tfoot>\r\n</div>"
+module.exports = "<div class=\"container\">\r\n    <ng-container *ngFor=\"let product of this.current_cart.products\">\r\n        <table id=\"cart\" class=\"table table-hover table-condensed\">\r\n            <tbody>\r\n                <tr>\r\n                    <td data-th=\"Product\">\r\n                        <div class=\"row\">\r\n                            <div class=\"col-sm-2 hidden-xs\"><img src=\"{{product.image}}\" alt=\"...\"\r\n                                    class=\"img-responsive\" /></div>\r\n                            <div class=\"col-sm-10\">\r\n                                <h4 class=\"nomargin\">{{product.name}}</h4>\r\n                                <p>{{product.description}}</p>\r\n                            </div>\r\n                        </div>\r\n                    </td>\r\n                    <td data-th=\"Price\">${{product.price}}</td>\r\n                    <td data-th=\"Subtotal\" class=\"text-center\">${{product.price}}</td>\r\n                    <td class=\"actions\" data-th=\"\">\r\n                        <button class=\"btn btn-danger btn-sm\"><i class=\"fa fa-trash-o\">Delete</i></button>\r\n                    </td>\r\n                </tr>\r\n            </tbody>\r\n        </table>\r\n    </ng-container>\r\n    <tfoot> \r\n        <tr>\r\n            <td><a href=\"#\" class=\"btn btn-warning\"><i class=\"fa fa-angle-left\"></i> Continue Shopping</a></td>\r\n            <td colspan=\"2\" class=\"hidden-xs\"></td>\r\n            <td class=\"hidden-xs text-center\"><strong>Total ${{totalCost}}</strong></td>\r\n            <td><a  class=\"btn btn-success btn-block\">Checkout <i\r\n                        class=\"fa fa-angle-right\"></i></a></td>\r\n        </tr>\r\n    </tfoot>\r\n</div>"
 
 /***/ }),
 
@@ -916,6 +916,9 @@ let TransactionService = class TransactionService {
     addToCart(id) {
         return this.http.get(`project2/addtocart/${id}`);
     }
+    checkOut(id, totalcost) {
+        return this.http.post(`project2/checkout/${id}`, { "totalcost": totalcost });
+    }
 };
 TransactionService.ctorParameters = () => [
     { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
@@ -1043,17 +1046,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../user.service */ "./src/app/user.service.ts");
+/* harmony import */ var _transaction_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../transaction.service */ "./src/app/transaction.service.ts");
+
 
 
 
 
 let CartComponent = class CartComponent {
-    constructor(router, activatedroute, userservice) {
+    constructor(router, activatedroute, userservice, transactionservice) {
         this.router = router;
         this.activatedroute = activatedroute;
         this.userservice = userservice;
+        this.transactionservice = transactionservice;
         this.user = {};
         this.current_cart = {};
+        this.totalCost = 0;
         this.checkLogin();
     }
     ngOnInit() {
@@ -1070,17 +1077,25 @@ let CartComponent = class CartComponent {
                         if (transaction.status = "current") {
                             this.current_cart = transaction;
                             console.log(this.current_cart);
+                            for (let product of this.current_cart.products) {
+                                console.log(product);
+                                this.totalCost += product.price;
+                            }
                         }
                     }
                 }
             }
         });
     }
+    checkOut() {
+        this.transactionservice.checkOut(this.current_cart.id, this.totalCost).subscribe();
+    }
 };
 CartComponent.ctorParameters = () => [
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
-    { type: _user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"] }
+    { type: _user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"] },
+    { type: _transaction_service__WEBPACK_IMPORTED_MODULE_4__["TransactionService"] }
 ];
 CartComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
