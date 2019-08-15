@@ -28,11 +28,14 @@ import com.revature.project2.Repositories.*;
 public class TransactionsController {
 	@Autowired
 	private UsersRepository userRepository;
+	@Autowired
 	private ProductsRepository productRepository;
+	@Autowired
 	private TransactionsRepository transactionRepository;
 	
 	@GetMapping(path="/addtocart/{id}")
 	public @ResponseBody void addtocart (@PathVariable @NotNull int id, HttpSession session) {
+		Boolean haveCurrentCart;
 		Users user = (Users)session.getAttribute("xuser");
 		if(user.getTransactions().isEmpty()) {
 			Transactions newtransaction = new Transactions();
@@ -43,9 +46,31 @@ public class TransactionsController {
 			userRepository.save(user);
 			Products product = productRepository.findOneById(id);
 			returntransaction.getProducts().add(product);
-			transactionRepository.save(returntransaction);
-			System.out.print(returntransaction);
-			
+			transactionRepository.save(returntransaction);			
+		}else {
+			for(Transactions transaction : user.getTransactions()) {
+				System.out.print(transaction.getStatus());
+				if(transaction.getStatus().equals("current")) {
+					haveCurrentCart = true;
+					Products product = productRepository.findOneById(id);
+					transaction.getProducts().add(product);
+					transactionRepository.save(transaction);			
+				}else {
+					haveCurrentCart = false;
+				}
+				if( haveCurrentCart == false) {
+					Transactions newtransaction = new Transactions();
+					newtransaction.setStatus("current");
+					newtransaction.setTotalcost(0);
+					Transactions returntransaction = transactionRepository.save(newtransaction);
+					user.getTransactions().add(returntransaction);
+					userRepository.save(user);
+					Products product = productRepository.findOneById(id);
+					returntransaction.getProducts().add(product);
+					transactionRepository.save(returntransaction);	
+				}
+				
+			}
 		}
 	}
 }

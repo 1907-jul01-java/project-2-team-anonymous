@@ -17,6 +17,8 @@ import { TransactionComponent } from './admin/transaction/transaction.component'
 import { InventoryComponent } from './admin/inventory/inventory.component';
 import { CheckproductComponent } from './user/checkproduct/checkproduct.component';
 import { UpdateComponent } from './admin/update/update.component';
+import { NgFlashMessagesModule } from 'ng-flash-messages';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { UpdateComponent } from './admin/update/update.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgFlashMessagesModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -49,19 +49,16 @@ public class UsersController {
 	
 	@GetMapping(path="/checklogin/{id}")
 	@ResponseBody
-	public String checkLogin(@PathVariable @NotNull int id, HttpSession session) {
+	public Users checkLogin(@PathVariable @NotNull int id, HttpSession session) {
 		Users loggedUser = (Users)session.getAttribute("xuser");
 		if(loggedUser != null) {
 			if (id == loggedUser.getId()) {
-				System.out.println("success");
-				return "{\"result\":\"success\"}";
+				return loggedUser;
 			}else {
-				System.out.println("failure");
-				return "{\"result\":\"failure\"}";
+				return loggedUser;
 			}
 		}else {
-			System.out.println("failure");
-			return "{\"result\":\"failure\"}";
+			return loggedUser;
 		}
 	}
 	

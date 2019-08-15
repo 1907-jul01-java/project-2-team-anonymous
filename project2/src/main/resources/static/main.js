@@ -140,7 +140,7 @@ module.exports = "<div class=\"container\">\r\n\r\n\t<div class=\"row\">\r\n\t\t
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n\t<table id=\"cart\" class=\"table table-hover table-condensed\">\r\n\t\t<thead>\r\n\t\t\t<tr>\r\n\t\t\t\t<th style=\"width:50%\">Product</th>\r\n\t\t\t\t<th style=\"width:10%\">Price</th>\r\n\t\t\t\t<th style=\"width:8%\">Quantity</th>\r\n\t\t\t\t<th style=\"width:22%\" class=\"text-center\">Subtotal</th>\r\n\t\t\t\t<th style=\"width:10%\"></th>\r\n\t\t\t</tr>\r\n\t\t</thead>\r\n\t\t<tbody>\r\n\t\t\t<tr>\r\n\t\t\t\t<td data-th=\"Product\">\r\n\t\t\t\t\t<div class=\"row\">\r\n\t\t\t\t\t\t<div class=\"col-sm-2 hidden-xs\"><img src=\"https://www.tactics.com/a/93ep/2/nike-sb-logo-dri-fit-t-shirt-white-black.webp\" alt=\"...\"\r\n\t\t\t\t\t\t\t\tclass=\"img-responsive\" /></div>\r\n\t\t\t\t\t\t<div class=\"col-sm-10\">\r\n\t\t\t\t\t\t\t<h4 class=\"nomargin\">Product 1</h4>\r\n\t\t\t\t\t\t\t<p>The Nike SB Logo Dri-Fit t-shirt is what happens when modern fabric technology and classic style collide.</p>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</td>\r\n\t\t\t\t<td data-th=\"Price\">$150.00</td>\r\n\t\t\t\t<td data-th=\"Quantity\">\r\n\t\t\t\t\t<input type=\"number\" class=\"form-control text-center\" value=\"1\">\r\n\t\t\t\t</td>\r\n\t\t\t\t<td data-th=\"Subtotal\" class=\"text-center\">150.00</td>\r\n\t\t\t\t<td class=\"actions\" data-th=\"\">\r\n\t\t\t\t\t<button class=\"btn btn-info btn-sm\"><i class=\"fa fa-refresh\"></i></button>\r\n\t\t\t\t\t<button class=\"btn btn-danger btn-sm\"><i class=\"fa fa-trash-o\"></i></button>\r\n\t\t\t\t</td>\r\n\t\t\t</tr>\r\n\t\t</tbody>\r\n\t\t<tfoot>\r\n\t\t\t<tr class=\"visible-xs\">\r\n\t\t\t\t<td class=\"text-center\"><strong>Total 150.99</strong></td>\r\n\t\t\t</tr>\r\n\t\t\t<tr>\r\n\t\t\t\t<td><a href=\"#\" class=\"btn btn-warning\"><i class=\"fa fa-angle-left\"></i> Continue Shopping</a></td>\r\n\t\t\t\t<td colspan=\"2\" class=\"hidden-xs\"></td>\r\n\t\t\t\t<td class=\"hidden-xs text-center\"><strong>Total $150.00</strong></td>\r\n\t\t\t\t<td><a href=\"https://www.paypal.com/webapps/hermes?token=5EY097812P7754247&useraction=commit&mfid=1546377013907_cf1dec6830d7\"\r\n\t\t\t\t\t\tclass=\"btn btn-success btn-block\">Checkout <i class=\"fa fa-angle-right\"></i></a></td>\r\n\t\t\t</tr>\r\n\t\t</tfoot>\r\n\t</table>\r\n</div>"
+module.exports = "<div class=\"container\">\r\n    <ng-container *ngFor=\"let product of this.current_cart.products\">\r\n        <table id=\"cart\" class=\"table table-hover table-condensed\">\r\n            <tbody>\r\n                <tr>\r\n                    <td data-th=\"Product\">\r\n                        <div class=\"row\">\r\n                            <div class=\"col-sm-2 hidden-xs\"><img src=\"{{product.image}}\" alt=\"...\"\r\n                                    class=\"img-responsive\" /></div>\r\n                            <div class=\"col-sm-10\">\r\n                                <h4 class=\"nomargin\">{{product.name}}</h4>\r\n                                <p>{{product.description}}</p>\r\n                            </div>\r\n                        </div>\r\n                    </td>\r\n                    <td data-th=\"Price\">${{product.price}}</td>\r\n                    <td data-th=\"Subtotal\" class=\"text-center\">${{product.price}}</td>\r\n                    <td class=\"actions\" data-th=\"\">\r\n                        <button class=\"btn btn-danger btn-sm\"><i class=\"fa fa-trash-o\">Delete</i></button>\r\n                    </td>\r\n                </tr>\r\n            </tbody>\r\n        </table>\r\n    </ng-container>\r\n    <tfoot>\r\n        <tr>\r\n            <td><a href=\"#\" class=\"btn btn-warning\"><i class=\"fa fa-angle-left\"></i> Continue Shopping</a></td>\r\n            <td colspan=\"2\" class=\"hidden-xs\"></td>\r\n            <td class=\"hidden-xs text-center\"><strong>Total $150.00</strong></td>\r\n            <td><a href=\"Placeholderatthemoment\" class=\"btn btn-success btn-block\">Checkout <i\r\n                        class=\"fa fa-angle-right\"></i></a></td>\r\n        </tr>\r\n    </tfoot>\r\n</div>"
 
 /***/ }),
 
@@ -151,7 +151,7 @@ module.exports = "<div class=\"container\">\r\n\t<table id=\"cart\" class=\"tabl
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"span2\">\r\n      <img src=\"{{product.image}}\"  alt=\"\" class=\"img-rounded\">\r\n    </div>\r\n    <div class=\"span4\">\r\n      <blockquote>\r\n        <p>{{product.name}}</p>\r\n      </blockquote>\r\n      <p>\r\n        {{product.description}}<br>\r\n        <button (click)=\"addToCart()\">Add to cart</button>\r\n      </p>\r\n    </div>\r\n "
+module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"span2\">\r\n            <img src=\"{{product.image}}\" alt=\"\" class=\"img-rounded\">\r\n        </div>\r\n        <div class=\"span4\">\r\n            <blockquote>\r\n                <p>{{product.name}}</p>\r\n            </blockquote>\r\n            <p>\r\n                {{product.description}}<br>\r\n                <button (click)=\"addToCart()\">Add to cart</button>\r\n            </p>\r\n        </div>\r\n        <br>\r\n        <ng-flash-message></ng-flash-message>\r\n</div>"
 
 /***/ }),
 
@@ -173,7 +173,7 @@ module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n      
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark sidebarNavigation\" data-sidebarClass=\"navbar-dark bg-dark\">\r\n        <div class=\"container-fluid\">\r\n        <a class=\"navbar-brand\" href=\"#\">Anonymous</a>\r\n        <button class=\"navbar-toggler leftNavbarToggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\"\r\n            aria-controls=\"navbarsExampleDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n            <span class=\"navbar-toggler-icon\"></span>\r\n        </button>\r\n\r\n        <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\">\r\n            <ul class=\"nav navbar-nav nav-flex-icons ml-auto\">\r\n                <li class=\"nav-item\">\r\n                    <a class=\"nav-link\" [routerLink]=\"['account']\">Account </a>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n                    <a class=\"nav-link\" [routerLink]=\"['shop']\">Shop</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li class=\"nav-item\">\r\n                    <a class=\"nav-link\" [routerLink]=\"['cart']\">Cart</a>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n\t\t\t\t\t <a class=\"nav-link\" (click)= \"logout()\">Log Out</a>\r\n                </li>\r\n\t\t\t</ul>\r\n           <!--  <form class=\"form-inline my-2 my-lg-0\">\r\n                <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" aria-label=\"Search\">\r\n                <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n            </form> -->\r\n        </div>\r\n    </div>\r\n</nav>\r\n<router-outlet></router-outlet>"
+module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark sidebarNavigation\" data-sidebarClass=\"navbar-dark bg-dark\">\r\n        <div class=\"container-fluid\">\r\n        <a class=\"navbar-brand\" href=\"#\">Anonymous</a>\r\n        <button class=\"navbar-toggler leftNavbarToggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\"\r\n            aria-controls=\"navbarsExampleDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n            <span class=\"navbar-toggler-icon\"></span>\r\n        </button>\r\n\r\n        <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\">\r\n            <ul class=\"nav navbar-nav nav-flex-icons ml-auto\">\r\n                <li class=\"nav-item\">\r\n                    <a class=\"nav-link\" [routerLink]=\"['account']\">Account </a>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n                    <a class=\"nav-link\" [routerLink]=\"['shop']\">Shop</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li class=\"nav-item\">\r\n                    <a class=\"nav-link\" [routerLink]=\"['cart']\">Cart ({{this.current_cart.products.length}})</a>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n\t\t\t\t\t <a class=\"nav-link\" (click)= \"logout()\">Log Out</a>\r\n                </li>\r\n\t\t\t</ul>\r\n           <!--  <form class=\"form-inline my-2 my-lg-0\">\r\n                <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" aria-label=\"Search\">\r\n                <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n            </form> -->\r\n        </div>\r\n    </div>\r\n</nav>\r\n<router-outlet></router-outlet>"
 
 /***/ }),
 
@@ -678,6 +678,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _admin_inventory_inventory_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./admin/inventory/inventory.component */ "./src/app/admin/inventory/inventory.component.ts");
 /* harmony import */ var _user_checkproduct_checkproduct_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./user/checkproduct/checkproduct.component */ "./src/app/user/checkproduct/checkproduct.component.ts");
 /* harmony import */ var _admin_update_update_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./admin/update/update.component */ "./src/app/admin/update/update.component.ts");
+/* harmony import */ var ng_flash_messages__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ng-flash-messages */ "./node_modules/ng-flash-messages/ng-flash-messages.umd.js");
+/* harmony import */ var ng_flash_messages__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(ng_flash_messages__WEBPACK_IMPORTED_MODULE_20__);
+
 
 
 
@@ -722,7 +725,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
             _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"]
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
+            ng_flash_messages__WEBPACK_IMPORTED_MODULE_20__["NgFlashMessagesModule"].forRoot()
         ],
         providers: [],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
@@ -1037,13 +1041,47 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CartComponent", function() { return CartComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../user.service */ "./src/app/user.service.ts");
+
+
 
 
 let CartComponent = class CartComponent {
-    constructor() { }
+    constructor(router, activatedroute, userservice) {
+        this.router = router;
+        this.activatedroute = activatedroute;
+        this.userservice = userservice;
+        this.user = {};
+        this.current_cart = {};
+        this.checkLogin();
+    }
     ngOnInit() {
     }
+    checkLogin() {
+        this.userservice.checkLogin(1).subscribe((result) => {
+            if (result == null) {
+                this.router.navigate(['/']);
+            }
+            else {
+                this.user = result;
+                if (this.user.transactions) {
+                    for (let transaction of this.user.transactions) {
+                        if (transaction.status = "current") {
+                            this.current_cart = transaction;
+                            console.log(this.current_cart);
+                        }
+                    }
+                }
+            }
+        });
+    }
 };
+CartComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
+    { type: _user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"] }
+];
 CartComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-cart',
@@ -1082,17 +1120,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _product_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../product.service */ "./src/app/product.service.ts");
 /* harmony import */ var _transaction_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../transaction.service */ "./src/app/transaction.service.ts");
+/* harmony import */ var ng_flash_messages__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ng-flash-messages */ "./node_modules/ng-flash-messages/ng-flash-messages.umd.js");
+/* harmony import */ var ng_flash_messages__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(ng_flash_messages__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
 
 
 let CheckproductComponent = class CheckproductComponent {
-    constructor(productservice, router, activatedroute, transactionservice) {
+    constructor(productservice, router, activatedroute, transactionservice, ngFlashMessageService) {
         this.productservice = productservice;
         this.router = router;
         this.activatedroute = activatedroute;
         this.transactionservice = transactionservice;
+        this.ngFlashMessageService = ngFlashMessageService;
         this.product = {};
     }
     ngOnInit() {
@@ -1102,14 +1144,26 @@ let CheckproductComponent = class CheckproductComponent {
         this.productservice.getproductbyid(this.activatedroute.params['value'].id).subscribe(result => this.product = result);
     }
     addToCart() {
-        this.transactionservice.addToCart(this.product.id).subscribe();
+        this.transactionservice.addToCart(this.product.id).subscribe(() => {
+            this.ngFlashMessageService.showFlashMessage({
+                // Array of messages each will be displayed in new line
+                messages: ["Added to Cart"],
+                // Whether the flash can be dismissed by the user defaults to false
+                dismissible: true,
+                // Time after which the flash disappears defaults to 2000ms
+                timeout: false,
+                // Type of flash message, it defaults to info and success, warning, danger types can also be used
+                type: 'danger'
+            });
+        });
     }
 };
 CheckproductComponent.ctorParameters = () => [
     { type: _product_service__WEBPACK_IMPORTED_MODULE_3__["ProductService"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
-    { type: _transaction_service__WEBPACK_IMPORTED_MODULE_4__["TransactionService"] }
+    { type: _transaction_service__WEBPACK_IMPORTED_MODULE_4__["TransactionService"] },
+    { type: ng_flash_messages__WEBPACK_IMPORTED_MODULE_5__["NgFlashMessageService"] }
 ];
 CheckproductComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1157,6 +1211,8 @@ let ShopComponent = class ShopComponent {
         this.productservice = productservice;
         this.router = router;
         this.products = {};
+        this.user = {};
+        this.current_cart = {};
     }
     ngOnInit() {
         this.getall();
@@ -1218,14 +1274,28 @@ let UserComponent = class UserComponent {
         this.userservice = userservice;
         this.router = router;
         this.activatedroute = activatedroute;
+        this.user = {};
+        this.current_cart = {};
         this.checkLogin();
     }
     ngOnInit() {
     }
     checkLogin() {
         this.userservice.checkLogin(this.activatedroute.params['value'].id).subscribe((result) => {
-            if (result['result'] == "failure") {
+            if (result == null) {
                 this.router.navigate(['/']);
+            }
+            else {
+                this.user = result;
+                console.log(this.user);
+                if (this.user.transactions) {
+                    for (let transaction of this.user.transactions) {
+                        if (transaction.status = "current") {
+                            this.current_cart = transaction;
+                            console.log(this.current_cart);
+                        }
+                    }
+                }
             }
         });
     }
