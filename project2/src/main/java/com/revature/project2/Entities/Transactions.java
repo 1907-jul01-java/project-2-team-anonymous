@@ -1,6 +1,7 @@
 package com.revature.project2.Entities;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -9,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -24,11 +26,11 @@ public class Transactions {
     private int id;
     private String status;
     private int totalcost;
-    @OneToMany(
-            cascade = CascadeType.ALL
-        )
-    private List<Products> products = new ArrayList<>();
-	public int getId() {
+
+    @ManyToMany(mappedBy = "productInTransaction", cascade= CascadeType.MERGE)
+    private List<Products> products = new ArrayList<Products>();    
+
+    public int getId() {
 		return id;
 	}
 	public void setId(int id) {
@@ -57,5 +59,6 @@ public class Transactions {
 		return "Transactions [id=" + id + ", status=" + status + ", totalcost=" + totalcost + ", products=" + products
 				+ "]";
 	}
+
     
 }

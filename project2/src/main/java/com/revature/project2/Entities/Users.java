@@ -28,7 +28,7 @@ public class Users {
     @OneToMany(
             cascade = CascadeType.ALL
         )
-    private List<Transactions> transactions = new ArrayList<>();
+    private List<Transactions> transactions = new ArrayList<Transactions>();
     
 	public int getId() {
 		return id;

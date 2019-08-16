@@ -47,19 +47,11 @@ public class UsersController {
 		return userRepository.findAll();
 	}
 	
-	@GetMapping(path="/checklogin/{id}")
+	@GetMapping(path="/checklogin")
 	@ResponseBody
-	public Users checkLogin(@PathVariable @NotNull int id, HttpSession session) {
+	public Users checkLogin(HttpSession session) {
 		Users loggedUser = (Users)session.getAttribute("xuser");
-		if(loggedUser != null) {
-			if (id == loggedUser.getId()) {
-				return loggedUser;
-			}else {
-				return loggedUser;
-			}
-		}else {
-			return loggedUser;
-		}
+		return loggedUser;
 	}
 	
 	@GetMapping(path="/logout")

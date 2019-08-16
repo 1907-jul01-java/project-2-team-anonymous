@@ -7,5 +7,6 @@ import com.revature.project2.Entities.Products;
 import com.revature.project2.Entities.Transactions;
 
 public interface TransactionsRepository extends JpaRepository<Transactions, Integer> {
-
+    @Query("Select t from Transactions t WHERE t.id =?1")
+    public Transactions findOneById(int id);
 }

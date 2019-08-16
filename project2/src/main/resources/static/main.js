@@ -41,7 +41,7 @@ module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark sideb
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"well\">\r\n            <h1 class=\"text-center\">Products</h1>\r\n            <ul *ngFor=\"let product of products\" class=\"list-group\" style=\"list-style: none;\">\r\n                <li>\r\n                    <a href=\"#\" class=\"list-group-item\">\r\n                        <div class=\"media col-md-3\">\r\n                            <figure class=\"pull-left\">\r\n                                <img [src]=\"product.image\">\r\n                            </figure>\r\n                        </div>\r\n                        <div class=\"col-md-6\">\r\n                            <a [routerLink]=\"['update', product.id]\"><h4 class=\"list-group-item-heading\">{{product.name}}</h4></a>\r\n                            <p class=\"list-group-item-text\"> {{product.description}}</p>\r\n                            <p class=\"list-group-item-text\"> {{product.price}}</p>\r\n                            <button (click)=\"delete(product.id)\">Delete Product</button>\r\n                        </div>\r\n                    </a>\r\n                    <hr>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"well\">\r\n            <h1 class=\"text-center\">Products</h1>\r\n            <ul *ngFor=\"let product of products\" class=\"list-group\" style=\"list-style: none;\">\r\n                <li>\r\n                    <a href=\"#\" class=\"list-group-item\">\r\n                        <div class=\"media col-md-3\">\r\n                            <figure class=\"pull-left\">\r\n                                <img [src]=\"product.image\" style=\"width:250px; height:300px;\">\r\n                            </figure>\r\n                        </div>\r\n                        <div class=\"col-md-6\">\r\n                            <a [routerLink]=\"['update', product.id]\"><h4 class=\"list-group-item-heading\">{{product.name}}</h4></a>\r\n                            <p class=\"list-group-item-text\"> {{product.description}}</p>\r\n                            <p class=\"list-group-item-text\"> {{product.price}}</p>\r\n                            <button (click)=\"delete(product.id)\">Delete Product</button>\r\n                        </div>\r\n                    </a>\r\n                    <hr>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -129,7 +129,7 @@ module.exports = "<div class=\"container-fluid\">\r\n    <div class=\"container\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n\r\n\t<div class=\"row\">\r\n\t\t<div class=\"col-md-9  admin-content\" id=\"profile\">\r\n\t\t\t<div class=\"panel panel-info\" style=\"margin: 1em;\">\r\n\t\t\t\t<div class=\"panel-heading\">\r\n\t\t\t\t\t<h3 class=\"panel-title\">Name</h3>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"panel-body\">\r\n\t\t\t\t\tTrial User\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"panel panel-info\" style=\"margin: 1em;\">\r\n\t\t\t\t<div class=\"panel-heading\">\r\n\t\t\t\t\t<h3 class=\"panel-title\">Email</h3>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"panel-body\">\r\n\t\t\t\t\ttestuser@gmail.com\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"panel panel-info\" style=\"margin: 1em;\">\r\n\t\t\t\t<div class=\"panel-heading\">\r\n\t\t\t\t\t<h3 class=\"panel-title\">Purchase History</h3>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"panel-body\">\r\n\t\t\t\t\tPurchase detail\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t\t<div class=\"col-md-9  admin-content\" id=\"change-password\">\r\n\t\t\t<form action=\"/password\" method=\"post\">\r\n\r\n\r\n\t\t\t\t<div class=\"panel panel-info\" style=\"margin: 1em;\">\r\n\t\t\t\t\t<div class=\"panel-heading\">\r\n\t\t\t\t\t\t<h3 class=\"panel-title\"><label for=\"new_password\" class=\"control-label panel-title\">New\r\n\t\t\t\t\t\t\t\tPassword</label></h3>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"panel-body\">\r\n\t\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t\t\t<div class=\"col-sm-10\">\r\n\t\t\t\t\t\t\t\t<input type=\"password\" class=\"form-control\" name=\"password\" id=\"new_password\">\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\r\n\r\n\t\t\t\t<div class=\"panel panel-info\" style=\"margin: 1em;\">\r\n\t\t\t\t\t<div class=\"panel-heading\">\r\n\t\t\t\t\t\t<h3 class=\"panel-title\"><label for=\"confirm_password\" class=\"control-label panel-title\">Confirm\r\n\t\t\t\t\t\t\t\tpassword</label></h3>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"panel-body\">\r\n\t\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t\t\t<div class=\"col-sm-10\">\r\n\t\t\t\t\t\t\t\t<input type=\"password\" class=\"form-control\" name=\"password_confirmation\"\r\n\t\t\t\t\t\t\t\t\tid=\"confirm_password\">\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\r\n\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<div class=\"panel-body\">\r\n\t\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t\t\t<div class=\"pull-left\">\r\n\t\t\t\t\t\t\t\t<input type=\"submit\" class=\"btn btn-primary\" name=\"submit\" id=\"submit\">\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</form>\r\n\t\t</div>\r\n\r\n\t\t<div class=\"col-md-9  admin-content\" id=\"settings\"></div>\r\n\t</div>\r\n</div>"
+module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"col-md-9  admin-content\" id=\"profile\">\r\n            <div class=\"panel panel-info\" style=\"margin: 1em;\">\r\n                <div class=\"panel-heading\">\r\n                    <h3 class=\"panel-title\">First Name</h3>\r\n                </div>\r\n                <div class=\"panel-body\">\r\n                    {{user.firstname}}\r\n                </div>\r\n            </div>\r\n            <div class=\"panel panel-info\" style=\"margin: 1em;\">\r\n                <div class=\"panel-heading\">\r\n                    <h3 class=\"panel-title\">Username</h3>\r\n                </div>\r\n                <div class=\"panel-body\">\r\n                    {{user.username}}\r\n                </div>\r\n            </div>\r\n            <div class=\"panel panel-info\" style=\"margin: 1em;\">\r\n                <div class=\"panel-heading\">\r\n                    <h3 class=\"panel-title\">Purchase History</h3>\r\n                </div>\r\n                <div class=\"panel-body\">\r\n                    <tr *ngFor=\"let transaction of user.transactions\">\r\n                            <td>ID:{{transaction.id}} ,</td>\r\n                            <td>Products: \r\n                                <ul *ngFor=\" let product of transaction.products\">\r\n                                    <li>{{product.name}} ,</li>\r\n                                </ul>,\r\n                            </td>\r\n                            <td>Total: {{transaction.totalcost}}</td>\r\n                    </tr>\r\n                </div>\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -140,7 +140,7 @@ module.exports = "<div class=\"container\">\r\n\r\n\t<div class=\"row\">\r\n\t\t
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <ng-container *ngFor=\"let product of this.current_cart.products\">\r\n        <table id=\"cart\" class=\"table table-hover table-condensed\">\r\n            <tbody>\r\n                <tr>\r\n                    <td data-th=\"Product\">\r\n                        <div class=\"row\">\r\n                            <div class=\"col-sm-2 hidden-xs\"><img src=\"{{product.image}}\" alt=\"...\"\r\n                                    class=\"img-responsive\" /></div>\r\n                            <div class=\"col-sm-10\">\r\n                                <h4 class=\"nomargin\">{{product.name}}</h4>\r\n                                <p>{{product.description}}</p>\r\n                            </div>\r\n                        </div>\r\n                    </td>\r\n                    <td data-th=\"Price\">${{product.price}}</td>\r\n                    <td data-th=\"Subtotal\" class=\"text-center\">${{product.price}}</td>\r\n                    <td class=\"actions\" data-th=\"\">\r\n                        <button class=\"btn btn-danger btn-sm\"><i class=\"fa fa-trash-o\">Delete</i></button>\r\n                    </td>\r\n                </tr>\r\n            </tbody>\r\n        </table>\r\n    </ng-container>\r\n    <tfoot> \r\n        <tr>\r\n            <td><a href=\"#\" class=\"btn btn-warning\"><i class=\"fa fa-angle-left\"></i> Continue Shopping</a></td>\r\n            <td colspan=\"2\" class=\"hidden-xs\"></td>\r\n            <td class=\"hidden-xs text-center\"><strong>Total ${{totalCost}}</strong></td>\r\n            <td><a  class=\"btn btn-success btn-block\">Checkout <i\r\n                        class=\"fa fa-angle-right\"></i></a></td>\r\n        </tr>\r\n    </tfoot>\r\n</div>"
+module.exports = "<div class=\"container\">\r\n    <ng-container *ngFor=\"let product of this.current_cart.products\">\r\n        <table id=\"cart\" class=\"table table-hover table-condensed\">\r\n            <tbody>\r\n                <tr>\r\n                    <td data-th=\"Product\">\r\n                        <div class=\"row\">\r\n                            <div class=\"col-sm-2 hidden-xs\"><img src=\"{{product.image}}\" style=\"width:100px; height:100px;\"\r\n                                    class=\"img-responsive\" /></div>\r\n                            <div class=\"col-sm-10\">\r\n                                <h4 class=\"nomargin\">{{product.name}}</h4>\r\n                                <p>{{product.description}}</p>\r\n                            </div>\r\n                        </div>\r\n                    </td>\r\n                    <td data-th=\"Price\">${{product.price}}</td>\r\n                    <td data-th=\"Subtotal\" class=\"text-center\">${{product.price}}</td>\r\n                    <!-- <td class=\"actions\" data-th=\"\">\r\n                        <button class=\"btn btn-danger btn-sm\"><i class=\"fa fa-trash-o\">Delete</i></button>\r\n                    </td> -->\r\n                </tr>\r\n            </tbody>\r\n        </table>\r\n    </ng-container>\r\n    <tfoot> \r\n        <tr>\r\n            <td><a href=\"#\" class=\"btn btn-warning\"><i class=\"fa fa-angle-left\"></i> Continue Shopping</a></td>\r\n            <td colspan=\"2\" class=\"hidden-xs\"></td>\r\n            <td class=\"hidden-xs text-center\"><strong>Total ${{totalCost}}</strong></td>\r\n            <td><button  (click)=\"checkOut()\" class=\"btn btn-success btn-block\">Checkout <i\r\n                        class=\"fa fa-angle-right\"></i></button></td>\r\n        </tr>\r\n    </tfoot>\r\n</div>"
 
 /***/ }),
 
@@ -162,7 +162,7 @@ module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n      
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"well\">\r\n            <h1 class=\"text-center\">Products</h1>\r\n            <ul *ngFor=\"let product of products\" class=\"list-group\" style=\"list-style: none;\">\r\n                <li>\r\n                    <a href=\"#\" class=\"list-group-item\">\r\n                        <div class=\"media col-md-3\">\r\n                            <figure class=\"pull-left\">\r\n                                <img [src]=\"product.image\">\r\n                            </figure>\r\n                        </div>\r\n                            <div class=\"col-md-6\">\r\n                                <a [routerLink]=\"['shop', product.id]\"><h4 class=\"list-group-item-heading\"> {{product.name}} </h4></a>\r\n                                <p class=\"list-group-item-text\"> {{product.description}}</p>\r\n                                <p class=\"list-group-item-text\"> {{product.price}}</p>\r\n                            </div>\r\n                    </a>\r\n                    <hr>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"well\">\r\n            <h1 class=\"text-center\">Products</h1>\r\n            <ul *ngFor=\"let product of products\" class=\"list-group\" style=\"list-style: none;\">\r\n                <li>\r\n                    <a href=\"#\" class=\"list-group-item\">\r\n                        <div class=\"media col-md-3\">\r\n                            <figure class=\"pull-left\">\r\n                                <img [src]=\"product.image\" style=\"width: 400px; height:500px;\">\r\n                            </figure>\r\n                        </div>\r\n                            <div class=\"col-md-6\">\r\n                                <a [routerLink]=\"['shop', product.id]\"><h4 class=\"list-group-item-heading\"> {{product.name}} </h4></a>\r\n                                <p class=\"list-group-item-text\"> {{product.description}}</p>\r\n                                <p class=\"list-group-item-text\"> {{product.price}}</p>\r\n                            </div>\r\n                    </a>\r\n                    <hr>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -173,7 +173,7 @@ module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n      
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark sidebarNavigation\" data-sidebarClass=\"navbar-dark bg-dark\">\r\n        <div class=\"container-fluid\">\r\n        <a class=\"navbar-brand\" href=\"#\">Anonymous</a>\r\n        <button class=\"navbar-toggler leftNavbarToggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\"\r\n            aria-controls=\"navbarsExampleDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n            <span class=\"navbar-toggler-icon\"></span>\r\n        </button>\r\n\r\n        <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\">\r\n            <ul class=\"nav navbar-nav nav-flex-icons ml-auto\">\r\n                <li class=\"nav-item\">\r\n                    <a class=\"nav-link\" [routerLink]=\"['account']\">Account </a>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n                    <a class=\"nav-link\" [routerLink]=\"['shop']\">Shop</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li class=\"nav-item\">\r\n                    <a class=\"nav-link\" [routerLink]=\"['cart']\">Cart ({{this.current_cart.products.length}})</a>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n\t\t\t\t\t <a class=\"nav-link\" (click)= \"logout()\">Log Out</a>\r\n                </li>\r\n\t\t\t</ul>\r\n           <!--  <form class=\"form-inline my-2 my-lg-0\">\r\n                <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" aria-label=\"Search\">\r\n                <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n            </form> -->\r\n        </div>\r\n    </div>\r\n</nav>\r\n<router-outlet></router-outlet>"
+module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark sidebarNavigation\" data-sidebarClass=\"navbar-dark bg-dark\">\r\n        <div class=\"container-fluid\">\r\n        <a class=\"navbar-brand\" href=\"#\">Anonymous</a>\r\n        <button class=\"navbar-toggler leftNavbarToggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\"\r\n            aria-controls=\"navbarsExampleDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n            <span class=\"navbar-toggler-icon\"></span>\r\n        </button>\r\n\r\n        <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\">\r\n            <ul class=\"nav navbar-nav nav-flex-icons ml-auto\">\r\n                <li class=\"nav-item\">\r\n                    <a class=\"nav-link\" [routerLink]=\"['account']\">Account </a>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n                    <a class=\"nav-link\" [routerLink]=\"['shop']\">Shop</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li class=\"nav-item\">\r\n                    <a class=\"nav-link\" [routerLink]=\"['cart']\">Cart</a>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n\t\t\t\t\t <a class=\"nav-link\" (click)= \"logout()\">Log Out</a>\r\n                </li>\r\n\t\t\t</ul>\r\n           <!--  <form class=\"form-inline my-2 my-lg-0\">\r\n                <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" aria-label=\"Search\">\r\n                <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n            </form> -->\r\n        </div>\r\n    </div>\r\n</nav>\r\n<router-outlet></router-outlet>"
 
 /***/ }),
 
@@ -359,7 +359,7 @@ let ProductComponent = class ProductComponent {
     ngOnInit() {
     }
     addproduct() {
-        this.productservice.addproduct(this.product).subscribe();
+        this.productservice.addproduct(this.product).subscribe(this.router.navigate['admin/1/product']);
     }
     delete() {
         this.productservice.delete(this.product).subscribe();
@@ -917,6 +917,7 @@ let TransactionService = class TransactionService {
         return this.http.get(`project2/addtocart/${id}`);
     }
     checkOut(id, totalcost) {
+        console.log(id, totalcost);
         return this.http.post(`project2/checkout/${id}`, { "totalcost": totalcost });
     }
 };
@@ -959,8 +960,8 @@ let UserService = class UserService {
     login(user) {
         return this.http.post('/project2/login', user);
     }
-    checkLogin(id) {
-        return this.http.get(`/project2/checklogin/${id}`);
+    checkLogin() {
+        return this.http.get('/project2/checklogin');
     }
     logout() {
         return this.http.get('/project2/logout');
@@ -1002,13 +1003,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AccountComponent", function() { return AccountComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../user.service */ "./src/app/user.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
 
 
 let AccountComponent = class AccountComponent {
-    constructor() { }
+    constructor(userservice, router) {
+        this.userservice = userservice;
+        this.router = router;
+        this.user = {};
+    }
     ngOnInit() {
+        this.checkLogin();
+    }
+    checkLogin() {
+        this.userservice.checkLogin().subscribe((result) => {
+            if (result == null) {
+                this.router.navigate(['/']);
+            }
+            else {
+                this.user = result;
+                console.log(this.user);
+            }
+        });
     }
 };
+AccountComponent.ctorParameters = () => [
+    { type: _user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+];
 AccountComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-account',
@@ -1061,12 +1086,12 @@ let CartComponent = class CartComponent {
         this.user = {};
         this.current_cart = {};
         this.totalCost = 0;
-        this.checkLogin();
     }
     ngOnInit() {
+        this.checkLogin();
     }
     checkLogin() {
-        this.userservice.checkLogin(1).subscribe((result) => {
+        this.userservice.checkLogin().subscribe((result) => {
             if (result == null) {
                 this.router.navigate(['/']);
             }
@@ -1074,7 +1099,7 @@ let CartComponent = class CartComponent {
                 this.user = result;
                 if (this.user.transactions) {
                     for (let transaction of this.user.transactions) {
-                        if (transaction.status = "current") {
+                        if (transaction.status == "current") {
                             this.current_cart = transaction;
                             console.log(this.current_cart);
                             for (let product of this.current_cart.products) {
@@ -1088,7 +1113,11 @@ let CartComponent = class CartComponent {
         });
     }
     checkOut() {
-        this.transactionservice.checkOut(this.current_cart.id, this.totalCost).subscribe();
+        this.transactionservice.checkOut(this.current_cart.id, this.totalCost).subscribe(() => {
+            this.current_cart = {};
+            this.totalCost = 0;
+            this.router.navigate(['/user', this.user.id, "cart"]);
+        });
     }
 };
 CartComponent.ctorParameters = () => [
@@ -1296,7 +1325,7 @@ let UserComponent = class UserComponent {
     ngOnInit() {
     }
     checkLogin() {
-        this.userservice.checkLogin(this.activatedroute.params['value'].id).subscribe((result) => {
+        this.userservice.checkLogin().subscribe((result) => {
             if (result == null) {
                 this.router.navigate(['/']);
             }
@@ -1305,9 +1334,8 @@ let UserComponent = class UserComponent {
                 console.log(this.user);
                 if (this.user.transactions) {
                     for (let transaction of this.user.transactions) {
-                        if (transaction.status = "current") {
+                        if (transaction.status == "current") {
                             this.current_cart = transaction;
-                            console.log(this.current_cart);
                         }
                     }
                 }

@@ -12,6 +12,7 @@ export class TransactionService {
   }
 
   checkOut(id, totalcost){
+      console.log(id,totalcost);
       return this.http.post(`project2/checkout/${id}`, {"totalcost": totalcost})
   }
 }

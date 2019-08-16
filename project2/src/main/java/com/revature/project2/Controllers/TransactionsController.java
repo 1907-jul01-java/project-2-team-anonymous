@@ -1,6 +1,7 @@
 package com.revature.project2.Controllers;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 import javax.persistence.EntityManager;
@@ -35,7 +36,7 @@ public class TransactionsController {
 	
 	@GetMapping(path="/addtocart/{id}")
 	public @ResponseBody void addtocart (@PathVariable @NotNull int id, HttpSession session) {
-		Boolean haveCurrentCart;
+		Boolean haveCurrentCart = false;
 		Users user = (Users)session.getAttribute("xuser");
 		if(user.getTransactions().isEmpty()) {
 			Transactions newtransaction = new Transactions();
@@ -45,7 +46,9 @@ public class TransactionsController {
 			user.getTransactions().add(returntransaction);
 			userRepository.save(user);
 			Products product = productRepository.findOneById(id);
+			System.out.println(returntransaction);
 			returntransaction.getProducts().add(product);
+			System.out.println(returntransaction);
 			transactionRepository.save(returntransaction);			
 		}else {
 			for(Transactions transaction : user.getTransactions()) {
@@ -55,8 +58,6 @@ public class TransactionsController {
 					Products product = productRepository.findOneById(id);
 					transaction.getProducts().add(product);
 					transactionRepository.save(transaction);			
-				}else {
-					haveCurrentCart = false;
 				}
 				if( haveCurrentCart == false) {
 					Transactions newtransaction = new Transactions();
@@ -66,6 +67,7 @@ public class TransactionsController {
 					user.getTransactions().add(returntransaction);
 					userRepository.save(user);
 					Products product = productRepository.findOneById(id);
+					System.out.println(returntransaction);
 					returntransaction.getProducts().add(product);
 					transactionRepository.save(returntransaction);	
 				}
@@ -75,8 +77,11 @@ public class TransactionsController {
 	}
 	
 	@PostMapping(path = "/checkout/{id}")
-	public @ResponseBody void checkout(@PathVariable @NotNull int id, int totalcost) {
-		System.out.println(id);
-		System.out.println(totalcost);
+	public @ResponseBody void checkout(@PathVariable @NotNull int id, @RequestBody Transactions transaction ) {
+		Transactions checkouttrans = transactionRepository.findOneById(id);
+		checkouttrans.setTotalcost(transaction.getTotalcost());
+		checkouttrans.setStatus("checkedout");
+		System.out.println(checkouttrans);
+		transactionRepository.save(checkouttrans);
 	}
 }

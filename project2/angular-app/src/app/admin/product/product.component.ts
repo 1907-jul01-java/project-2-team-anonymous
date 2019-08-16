@@ -16,7 +16,7 @@ export class ProductComponent implements OnInit {
   }
 
   addproduct(){
-      this.productservice.addproduct(this.product).subscribe();
+      this.productservice.addproduct(this.product).subscribe(this.router.navigate['admin/1/product']);
   }
 
   delete(){

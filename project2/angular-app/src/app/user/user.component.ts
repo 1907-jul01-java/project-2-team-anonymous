@@ -19,16 +19,15 @@ export class UserComponent implements OnInit {
   }
   
   checkLogin(){
-      this.userservice.checkLogin(this.activatedroute.params['value'].id).subscribe((result)=>{
+      this.userservice.checkLogin().subscribe((result)=>{
           if(result == null ){ this.router.navigate(['/'])}
           else{
               this.user = result;
               console.log(this.user);
               if(this.user.transactions){
                   for(let transaction of this.user.transactions){
-                      if(transaction.status = "current"){
+                      if(transaction.status == "current"){
                         this.current_cart = transaction;
-                        console.log(this.current_cart)
                       }
                   }
               }

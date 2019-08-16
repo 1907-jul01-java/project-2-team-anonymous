@@ -17,8 +17,8 @@ export class UserService {
         return this.http.post('/project2/login', user);
     }
 
-    checkLogin(id){
-        return this.http.get(`/project2/checklogin/${id}`);
+    checkLogin(){
+        return this.http.get('/project2/checklogin');
     }
 
     logout(){
