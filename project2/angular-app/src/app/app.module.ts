@@ -16,7 +16,10 @@ import { ProductComponent } from './admin/product/product.component';
 import { TransactionComponent } from './admin/transaction/transaction.component';
 import { InventoryComponent } from './admin/inventory/inventory.component';
 import { CheckproductComponent } from './user/checkproduct/checkproduct.component';
+<<<<<<< HEAD
 import { UpdateComponent } from './admin/update/update.component';
+=======
+>>>>>>> JackieBranch
 
 @NgModule({
   declarations: [
@@ -32,8 +35,12 @@ import { UpdateComponent } from './admin/update/update.component';
     ProductComponent,
     TransactionComponent,
     InventoryComponent,
+<<<<<<< HEAD
     CheckproductComponent,
     UpdateComponent
+=======
+    CheckproductComponent
+>>>>>>> JackieBranch
   ],
   imports: [
     BrowserModule,

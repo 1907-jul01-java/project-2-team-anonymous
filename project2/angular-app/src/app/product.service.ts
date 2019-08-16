@@ -10,12 +10,16 @@ export class ProductService {
 
   addproduct(product: any={}){
       console.log(product)
+<<<<<<< HEAD
       return this.http.post('/project2/addproduct', product);
   }
 
   delete(id){
     console.log(id);
     return this.http.get(`/project2/delete/${id}`);
+=======
+      return this.http.post('/project2/addproduct', product)
+>>>>>>> JackieBranch
   }
 
   getall(){
@@ -23,6 +27,7 @@ export class ProductService {
   }
 
   getproductbyid(id){
+<<<<<<< HEAD
       return this.http.get(`/project2/getproductbyid/${id}`);
   }
 
@@ -32,4 +37,8 @@ export class ProductService {
     return this.http.post(`/project2/update/${id}`, product);
   }
 
+=======
+      return this.http.get(`/project2/getproductbyid/${id}`)
+  }
+>>>>>>> JackieBranch
 }

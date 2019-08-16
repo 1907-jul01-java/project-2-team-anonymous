@@ -8,7 +8,10 @@ import { Router } from '@angular/router'
 })
 export class InventoryComponent implements OnInit {
     products: any = {};
+<<<<<<< HEAD
 
+=======
+>>>>>>> JackieBranch
   constructor(private productservice: ProductService, private router:Router) { }
 
   ngOnInit() {
@@ -21,8 +24,11 @@ export class InventoryComponent implements OnInit {
         this.products = result})
   }
 
+<<<<<<< HEAD
   delete(id){
     this.productservice.delete(id).subscribe(() => this.router.navigate(['admin/1/inventory']));
   }
 
+=======
+>>>>>>> JackieBranch
 }

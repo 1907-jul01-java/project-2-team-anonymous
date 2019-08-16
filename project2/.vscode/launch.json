@@ -6,6 +6,7 @@
             "request": "launch",
             "mainClass": "com.revature.project2.DemoApplication",
             "projectName": "project2"
+<<<<<<< HEAD
         },
         {
             "type": "java",
@@ -16,6 +17,8 @@
             "mainClass": "com.revature.project2.DemoApplication",
             "projectName": "gs-project2-data",
             "args": ""
+=======
+>>>>>>> JackieBranch
         }
     ]
 }

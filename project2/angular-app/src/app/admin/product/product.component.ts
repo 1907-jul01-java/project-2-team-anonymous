@@ -19,8 +19,11 @@ export class ProductComponent implements OnInit {
       this.productservice.addproduct(this.product).subscribe();
   }
 
+<<<<<<< HEAD
   delete(){
     this.productservice.delete(this.product).subscribe();
   }
 
+=======
+>>>>>>> JackieBranch
 }

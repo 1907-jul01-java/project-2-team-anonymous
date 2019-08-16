@@ -7,6 +7,7 @@
                     <a href="#" class="list-group-item">
                         <div class="media col-md-3">
                             <figure class="pull-left">
+<<<<<<< HEAD
                                 <img [src]="product.image">
                             </figure>
                         </div>
@@ -15,10 +16,27 @@
                                 <p class="list-group-item-text"> {{product.description}}</p>
                                 <p class="list-group-item-text"> {{product.price}}</p>
                             </div>
+=======
+                                <a [routerLink]="[product.id]">
+                                    <img class="media-object img-rounded img-responsive" src="http://placehold.it/350x250"
+                                        alt="placehold.it/350x250">
+                                </a>
+                            </figure>
+                        </div>
+                        <div class="col-md-6">
+                            <h4 class="list-group-item-heading"> {{product.name}} </h4>
+                            <p class="list-group-item-text">Description: {{product.description}}</p><br>
+                            <p class="list-group-item-text">Price: ${{product.price}}</p>
+                        </div>
+>>>>>>> JackieBranch
                     </a>
                     <hr>
                 </li>
             </ul>
         </div>
+<<<<<<< HEAD
     </div>
 </div>
+=======
+    </div>
+>>>>>>> JackieBranch
