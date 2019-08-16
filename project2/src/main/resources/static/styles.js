@@ -599,12 +599,17 @@ if(false) {}
 /***/ (function(module, exports, __webpack_require__) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 __webpack_require__(/*! C:\Users\woodn\Desktop\Revature\project-2-team-anonymous\project2\angular-app\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
 module.exports = __webpack_require__(/*! C:\Users\woodn\Desktop\Revature\project-2-team-anonymous\project2\angular-app\src\styles.css */"./src/styles.css");
 =======
 __webpack_require__(/*! C:\Users\jjgua\eclipse-workspace\project-2-team-anonymous\project2\angular-app\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
 module.exports = __webpack_require__(/*! C:\Users\jjgua\eclipse-workspace\project-2-team-anonymous\project2\angular-app\src\styles.css */"./src/styles.css");
 >>>>>>> JackieBranch
+=======
+__webpack_require__(/*! C:\Users\jjgua\eclipse-workspace\project-2-team-anonymous\project2\angular-app\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
+module.exports = __webpack_require__(/*! C:\Users\jjgua\eclipse-workspace\project-2-team-anonymous\project2\angular-app\src\styles.css */"./src/styles.css");
+>>>>>>> JackiesBranch
 
 
 /***/ })

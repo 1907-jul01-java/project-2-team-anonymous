@@ -6140,12 +6140,17 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 __webpack_require__(/*! C:\Users\woodn\Desktop\Revature\project-2-team-anonymous\project2\angular-app\src\polyfills.ts */"./src/polyfills.ts");
 module.exports = __webpack_require__(/*! C:\Users\woodn\Desktop\Revature\project-2-team-anonymous\project2\angular-app\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\jit-polyfills.js */"./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js");
 =======
 __webpack_require__(/*! C:\Users\jjgua\eclipse-workspace\project-2-team-anonymous\project2\angular-app\src\polyfills.ts */"./src/polyfills.ts");
 module.exports = __webpack_require__(/*! C:\Users\jjgua\eclipse-workspace\project-2-team-anonymous\project2\angular-app\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\jit-polyfills.js */"./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js");
 >>>>>>> JackieBranch
+=======
+__webpack_require__(/*! C:\Users\jjgua\eclipse-workspace\project-2-team-anonymous\project2\angular-app\src\polyfills.ts */"./src/polyfills.ts");
+module.exports = __webpack_require__(/*! C:\Users\jjgua\eclipse-workspace\project-2-team-anonymous\project2\angular-app\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\jit-polyfills.js */"./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js");
+>>>>>>> JackiesBranch
 
 
 /***/ })

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from './../user.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -6,10 +8,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
+    user: any = {};
+    current_cart: any={};
 
-  constructor() { }
+  constructor(private userservice: UserService, private router:Router, private activatedroute:ActivatedRoute) {
+      this.checkLogin();
+  }
 
   ngOnInit() {
   }
+  
+  checkLogin(){
+      this.userservice.checkLogin().subscribe((result)=>{
+          if(result == null ){ this.router.navigate(['/'])}
+          else{
+              this.user = result;
+              console.log(this.user);
+              if(this.user.transactions){
+                  for(let transaction of this.user.transactions){
+                      if(transaction.status == "current"){
+                        this.current_cart = transaction;
+                      }
+                  }
+              }
+          }
+        });
+  }
+
+  logout(){
+      this.userservice.logout().subscribe(()=>{ this.router.navigate(['/'])});
+  }
+
 
 }

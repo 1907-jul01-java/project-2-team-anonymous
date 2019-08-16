@@ -18,8 +18,13 @@ import { InventoryComponent } from './admin/inventory/inventory.component';
 import { CheckproductComponent } from './user/checkproduct/checkproduct.component';
 <<<<<<< HEAD
 import { UpdateComponent } from './admin/update/update.component';
+<<<<<<< HEAD
 =======
 >>>>>>> JackieBranch
+=======
+import { NgFlashMessagesModule } from 'ng-flash-messages';
+
+>>>>>>> JackiesBranch
 
 @NgModule({
   declarations: [
@@ -46,7 +51,8 @@ import { UpdateComponent } from './admin/update/update.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgFlashMessagesModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
